@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QATAR CHAMBER</title>
+    <link rel="stylesheet" href="style/global.css" />
+    <link rel="stylesheet" href="style/output.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header
+      class="bg-white h-[112px] w-full flex justify-between"
+      style="box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1)"
+    >
+      <div
+        class="flex justify-center items-center h-full py-7 pe-5 ps-6 border-r border-[#D9D9D9]"
+      >
+        <img
+          src="assets/images/logo.png"
+          alt="Qatar Chamber Logo"
+          class="object-cover"
+        />
+      </div>
+      <nav class="flex flex-col h-full flex-1">
+        <!-- top nav -->
+        <div
+          class="px-7 py-[6px] flex items-center border-b border-[#D9D9D9] w-full"
+        >
+          <ul class="flex space-x-6 justify-end w-full">
+            <li>
+              <a href="#" class="text-black font-semibold">Useful links</a>
+            </li>
+            <li><a href="#" class="text-black font-semibold">Contact us</a></li>
+            <li><a href="#" class="text-black font-semibold">العربية</a></li>
+            <li>
+              <a href="#" class="text-black font-semibold"
+                ><img
+                  src="assets/images/icon_accessibility.svg"
+                  alt="icon"
+                  class="mt-1"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <!-- bottom nav -->
+        <div class="flex justify-between h-full">
+          <!-- nav links -->
+          <div
+            class="flex items-center px-7 space-x-6 justify-center h-full w-full flex-1 border-r border-[#D9D9D9] relative"
+          >
+            <div class="relative group">
+              <button
+                class="text-black hover:text-[#901630] font-semibold flex items-center space-x-2 transition-colors duration-200 h-full pb-2"
+                onclick="toggleDropdown('aboutUs')"
+              >
+                <span class="text-nowrap">About Us</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  class="transition-transform duration-200"
+                  id="aboutUsArrow"
+                >
+                  <path
+                    d="M13.4083 5.90126L8.88049 10.429C8.34576 10.9638 7.47076 10.9638 6.93604 10.429L2.40826 5.90126"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="group-hover:stroke-[#901630]"
+                  />
+                </svg>
+              </button>
+              <div
+                id="aboutUsDropdown"
+                class="hidden absolute top-full left-0 mt-2 w-64 bg-white shadow-lg border border-gray-200 rounded-lg z-50"
+              >
+                <div class="grid grid-cols-1 p-4 gap-2">
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >About Qatar Chamber</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Board of Directors</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Organization Chart</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Strategic Plan</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="relative group">
+              <button
+                class="text-black hover:text-[#901630] font-semibold flex items-center space-x-2 transition-colors duration-200 h-full pb-2"
+                onclick="toggleDropdown('ourServices')"
+              >
+                <span class="text-nowrap">Our services</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  class="transition-transform duration-200"
+                  id="ourServicesArrow"
+                >
+                  <path
+                    d="M13.4083 5.90126L8.88049 10.429C8.34576 10.9638 7.47076 10.9638 6.93604 10.429L2.40826 5.90126"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="group-hover:stroke-[#901630]"
+                  />
+                </svg>
+              </button>
+              <div
+                id="ourServicesDropdown"
+                class="hidden absolute top-full left-0 mt-2 w-64 bg-white shadow-lg border border-gray-200 rounded-lg z-50"
+              >
+                <div class="grid grid-cols-1 p-4 gap-2">
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Business Registration</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Certificate of Origin</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Legal Consulting</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Training Programs</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="relative group">
+              <button
+                class="text-black hover:text-[#901630] font-semibold flex items-center space-x-2 transition-colors duration-200 h-full pb-2"
+                onclick="toggleDropdown('committee')"
+              >
+                <span class="text-nowrap">Committee</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  class="transition-transform duration-200"
+                  id="committeeArrow"
+                >
+                  <path
+                    d="M13.4083 5.90126L8.88049 10.429C8.34576 10.9638 7.47076 10.9638 6.93604 10.429L2.40826 5.90126"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="group-hover:stroke-[#901630]"
+                  />
+                </svg>
+              </button>
+              <div
+                id="committeeDropdown"
+                class="hidden absolute top-full left-0 mt-2 w-64 bg-white shadow-lg border border-gray-200 rounded-lg z-50"
+              >
+                <div class="grid grid-cols-1 p-4 gap-2">
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Economic Committee</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Industrial Committee</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Commercial Committee</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Tourism Committee</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="relative group">
+              <button
+                class="text-black hover:text-[#901630] font-semibold flex items-center space-x-2 transition-colors duration-200 h-full pb-2"
+                onclick="toggleDropdown('newsEvents')"
+              >
+                <span class="text-nowrap">News & Events</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  class="transition-transform duration-200"
+                  id="newsEventsArrow"
+                >
+                  <path
+                    d="M13.4083 5.90126L8.88049 10.429C8.34576 10.9638 7.47076 10.9638 6.93604 10.429L2.40826 5.90126"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="group-hover:stroke-[#901630]"
+                  />
+                </svg>
+              </button>
+              <div
+                id="newsEventsDropdown"
+                class="hidden absolute top-full left-0 mt-2 w-64 bg-white shadow-lg border border-gray-200 rounded-lg z-50"
+              >
+                <div class="grid grid-cols-1 p-4 gap-2">
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Latest News</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Upcoming Events</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Press Releases</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Event Gallery</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="relative group">
+              <button
+                class="text-black hover:text-[#901630] font-semibold flex items-center space-x-2 transition-colors duration-200 h-full pb-2"
+                onclick="toggleDropdown('investQatar')"
+              >
+                <span class="text-nowrap">Invest in Qatar</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  class="transition-transform duration-200"
+                  id="investQatarArrow"
+                >
+                  <path
+                    d="M13.4083 5.90126L8.88049 10.429C8.34576 10.9638 7.47076 10.9638 6.93604 10.429L2.40826 5.90126"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="group-hover:stroke-[#901630]"
+                  />
+                </svg>
+              </button>
+              <div
+                id="investQatarDropdown"
+                class="hidden absolute top-full left-0 mt-2 w-64 bg-white shadow-lg border border-gray-200 rounded-lg z-50"
+              >
+                <div class="grid grid-cols-1 p-4 gap-2">
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Investment Opportunities</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Business Setup Guide</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Economic Zones</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Investor Services</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="relative group">
+              <button
+                class="text-black hover:text-[#901630] font-semibold flex items-center space-x-2 transition-colors duration-200 h-full pb-2"
+                onclick="toggleDropdown('resources')"
+              >
+                <span>Resources</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  class="transition-transform duration-200"
+                  id="resourcesArrow"
+                >
+                  <path
+                    d="M13.4083 5.90126L8.88049 10.429C8.34576 10.9638 7.47076 10.9638 6.93604 10.429L2.40826 5.90126"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="group-hover:stroke-[#901630]"
+                  />
+                </svg>
+              </button>
+              <div
+                id="resourcesDropdown"
+                class="hidden absolute top-full left-0 mt-2 w-64 bg-white shadow-lg border border-gray-200 rounded-lg z-50"
+              >
+                <div class="grid grid-cols-1 p-4 gap-2">
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Downloads</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Reports & Studies</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Statistics</a
+                  >
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
+                    >Publications</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="text-black hover:text-[#901630] font-semibold flex items-center space-x-2 transition-colors duration-200 group"
+            >
+              <img
+                src="assets/images/proicons_search.svg"
+                alt=""
+                class="group-hover:[filter:invert(14%)_sepia(75%)_saturate(3745%)_hue-rotate(334deg)_brightness(89%)_contrast(98%)] transition-all duration-200"
+              />
+            </button>
+          </div>
+          <div class="flex items-center px-7 h-full gap-4">
+            <button
+              class="cursor-pointer text-lg font-semibold text-[#901630] border border-[#901630] rounded-lg w-[96px] h-[48px]"
+            >
+              Login
+            </button>
+            <button
+              class="cursor-pointer text-lg font-semibold text-white bg-[#901630] border border-[#901630] rounded-lg w-[162px] h-[48px]"
+            >
+              Create account
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- hero -->
+    <section class="w-full">
+      <video autoplay muted loop>
+        <source
+          src="https://cdn.hukoomi.gov.qa/videos/demo_video.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+    <!-- Qatar Chamber section -->
+    <section class="py-[108px]">
+      <div class="section-container px-4 flex gap-10">
+        <div class="py-20 space-y-6">
+          <div class="flex flex-col gap-2">
+            <div class="w-[72px] h-[6px] bg-[#901630] rounded-[1px]"></div>
+            <h2 class="text-black text-[32px] font-bold">Qatar Chamber</h2>
+          </div>
+          <p class="text-[#4A4A4A] text-lg">
+            Established in 1963 by virtue of Law No (4) of the year 1963, Qatar
+            Chamber is considered one of the oldest chambers of commerce among
+            GCC chambers.
+          </p>
+          <p class="text-[#4A4A4A] text-lg">
+            It’s a non-profit public organization whose mission is to represent,
+            support and protect the interests of the business community in
+            Qatar.
+          </p>
+          <button
+            class="border text-lg font-semibold border-black rounded-lg text-black px-6 py-4"
+          >
+            Explore more
+          </button>
+        </div>
+        <!-- image -->
+        <div class="flex-shrink-0">
+          <img
+            src="assets/images/qatar-chamber.jpg"
+            alt="Qatar Chamber"
+            class="w-[717px] h-[529px] rounded-lg"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Our services section -->
+    <section class="py-[56px] bg-[#F8F8F8] services-background">
+      <!-- container -->
+      <div class="section-container px-4">
+        <!-- section header -->
+        <div class="flex items-center justify-between slide-left-1">
+          <!-- section title -->
+          <div class="flex flex-col gap-2">
+            <div class="w-[72px] h-[6px] bg-black rounded-[1px]"></div>
+            <h2 class="text-black text-[32px] font-bold">Our services</h2>
+          </div>
+          <button
+            class="border text-lg font-semibold border-black rounded-lg text-black px-6 py-4"
+          >
+            View all services
+          </button>
+        </div>
+        <div class="slide-right-1">
+          <!-- grid container -->
+          <div class="grid grid-cols-3 gap-6 py-[56px]">
+            <!-- card -->
+            <div
+              class="bg-white group hover:bg-[#901630] transition-colors duration-300 rounded-lg px-7 py-6 flex flex-col space-y-6 h-[430px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+              >
+                <path
+                  d="M60 31.998C59.9999 37.5358 58.3577 42.9491 55.281 47.5536C52.2043 52.1581 47.8313 55.7468 42.7151 57.866C37.5988 59.9852 31.9691 60.5397 26.5377 59.4594C21.1063 58.379 16.1172 55.7124 12.2014 51.7966C9.59315 49.2027 7.52531 46.1173 6.11756 42.7188C4.70981 39.3204 3.9901 35.6764 4.0001 31.998C4.0001 31.7584 4.09526 31.5287 4.26465 31.3593C4.43404 31.1899 4.66378 31.0947 4.90333 31.0947C5.14288 31.0947 5.37262 31.1899 5.542 31.3593C5.71139 31.5287 5.80655 31.7584 5.80655 31.998C5.80655 46.4411 17.5569 58.1915 32.0001 58.1915C46.4432 58.1915 58.1936 46.4411 58.1936 31.998C58.1936 17.5565 46.4432 5.80763 32.0001 5.80763C26.1356 5.80117 20.44 7.77018 15.8317 11.3971L18.0597 11.6191C18.2906 11.6417 18.5039 11.7522 18.6555 11.9278C18.8071 12.1034 18.8853 12.3306 18.8739 12.5623C18.8625 12.794 18.7624 13.0125 18.5944 13.1724C18.4263 13.3323 18.2032 13.4214 17.9712 13.4212C17.9411 13.4212 17.911 13.4197 17.8808 13.4167L13.5122 12.9814C13.2738 12.9576 13.0547 12.8401 12.9029 12.6548C12.7512 12.4695 12.6793 12.2315 12.703 11.9931L13.1382 7.6248C13.1486 7.50571 13.1826 7.38987 13.2381 7.284C13.2936 7.17812 13.3695 7.08431 13.4616 7.00802C13.5536 6.93172 13.6599 6.87445 13.7742 6.83953C13.8885 6.80461 14.0086 6.79273 14.1276 6.80458C14.2465 6.81643 14.362 6.85177 14.4671 6.90857C14.5723 6.96536 14.6652 7.04246 14.7404 7.13542C14.8155 7.22837 14.8715 7.33532 14.905 7.45006C14.9386 7.56481 14.949 7.68507 14.9357 7.80386L14.7196 9.97375C18.8507 6.73195 23.8103 4.71735 29.032 4.16007C34.2536 3.60278 39.5266 4.52527 44.2489 6.82218C48.9712 9.11908 52.9523 12.6978 55.7376 17.1496C58.5228 21.6013 59.9998 26.7467 60 31.998ZM32.4165 35.5803C35.3475 35.5803 36.7972 32.8216 37.2503 30.3471C35.2492 30.1048 33.3912 29.6245 31.0561 27.9166L27.5323 30.0515C27.6993 31.2029 28.0899 32.3105 28.6821 33.3119C29.6097 34.817 30.8661 35.5803 32.4165 35.5803ZM37.6735 37.3867H27.1629C24.7623 37.3867 22.8092 39.1698 22.8092 41.3616V43.5406C25.5669 45.7423 29.0233 46.8809 32.5496 46.7493C36.0759 46.6178 39.4379 45.2249 42.0239 42.8239V41.3616C42.0239 39.1698 40.0726 37.3867 37.6735 37.3867ZM31.6697 26.1154C33.8723 27.8418 35.5296 28.312 37.4096 28.5464C37.385 27.2882 36.8864 26.0857 36.0134 25.1793C35.1404 24.2729 33.9574 23.7296 32.701 23.6579C31.4446 23.5862 30.2075 23.9915 29.237 24.7926C28.2666 25.5938 27.6344 26.7318 27.4669 27.9791L30.6445 26.0538C30.8014 25.9588 30.9836 25.9137 31.1667 25.9247C31.3498 25.9357 31.5253 26.0022 31.6697 26.1154ZM32.0001 17.236C23.8603 17.236 17.2381 23.8582 17.2381 31.998C17.2353 35.6291 18.5763 39.1328 21.0027 41.8341V41.3616C21.0027 38.1736 23.7663 35.5803 27.1629 35.5803H28.1633C27.7764 35.1784 27.4347 34.7355 27.1442 34.2593C26.1863 32.7051 25.6146 30.6064 25.6146 28.6453C25.6146 27.7521 25.7905 26.8676 26.1324 26.0423C26.4742 25.2171 26.9752 24.4672 27.6068 23.8356C28.2385 23.204 28.9883 22.703 29.8136 22.3611C30.6388 22.0193 31.5233 21.8434 32.4165 21.8434C33.3098 21.8434 34.1943 22.0193 35.0195 22.3611C35.8448 22.703 36.5946 23.204 37.2263 23.8356C37.8579 24.4672 38.3589 25.2171 38.7007 26.0423C39.0426 26.8676 39.2185 27.7521 39.2185 28.6453C39.2185 30.6872 38.6427 32.7645 37.6379 34.3444C37.356 34.7898 37.0276 35.2039 36.6582 35.5798H37.6743C40.886 35.5798 43.5296 37.9012 43.8058 40.8508C45.7281 38.2998 46.7662 35.1917 46.7628 31.9975C46.762 23.8582 40.1404 17.236 32.0001 17.236Z"
+                  fill="#901630"
+                  class="group-hover:fill-white transition-colors duration-300"
+                />
+              </svg>
+              <h2
+                class="text-[#901630] text-2xl font-semibold group-hover:text-white transition-colors duration-300"
+              >
+                Membership Renewal
+              </h2>
+              <p
+                class="text-[#4A4A4A] text-lg flex-1 group-hover:text-white transition-colors duration-300"
+              >
+                Members (institutions/companies) registered with the Chamber
+                should renew their membership in order to keep practicing their
+                economic activities.
+              </p>
+              <div class="mt-auto flex justify-end gap-4 duration-300">
+                <button
+                  class="font-semibold text-black group-hover:text-white group-hover:text-xl group-hover:scale-110 transition-all group-hover:-translate-y-1 duration-500"
+                >
+                  Get started
+                </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M9.53152 2.62758C9.24356 2.28203 8.70871 2.29518 8.43807 2.65445L7.83893 3.44981C7.64117 3.71233 7.65342 4.07727 7.86833 4.32595L14.1057 11.5435C14.3321 11.8055 14.3321 12.194 14.1057 12.456L7.86833 19.6735C7.65342 19.9222 7.64118 20.2872 7.83894 20.5497L8.43807 21.345C8.70871 21.7043 9.24356 21.7174 9.53152 21.3719L16.9694 12.4465C17.185 12.1877 17.185 11.8118 16.9694 11.553L9.53152 2.62758Z"
+                    fill="black"
+                    class="group-hover:fill-white transition-colors duration-300"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- card -->
+            <div
+              class="bg-white group hover:bg-[#901630] transition-colors duration-300 rounded-lg px-7 py-6 flex flex-col space-y-6 h-[430px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  class="group-hover:fill-white transition-colors duration-300"
+                  d="M44.7802 41.2963L55.8511 22.1207L51.4245 19.5651L40.3535 38.7406L44.7802 41.2963ZM15.5217 5.99915H42.582C44.0327 5.99915 45.2146 7.18218 45.2146 8.63173V28.154L39.0297 38.8663L38.4858 44.1336C38.3428 45.5149 39.9169 46.4239 41.0426 45.6092L45.2146 42.5898V55.3671C45.2146 56.8177 44.0316 57.9996 42.582 57.9996H8.63258C7.18195 57.9996 6 56.8166 6 55.3671V15.5209H12.3474C14.0971 15.5209 15.5217 14.0951 15.5217 12.3466V5.99915ZM25.2525 16.0094H38.7675C39.0665 16.0094 39.3092 15.7668 39.3092 15.4678C39.3092 15.1688 39.0665 14.9261 38.7675 14.9261H25.2525C24.9535 14.9261 24.7108 15.1688 24.7108 15.4678C24.7108 15.7668 24.9535 16.0094 25.2525 16.0094ZM12.446 21.8325H38.7675C39.0665 21.8325 39.3092 21.5899 39.3092 21.2909C39.3092 20.9918 39.0665 20.7492 38.7675 20.7492H12.4471C12.1481 20.7492 11.9054 20.9918 11.9054 21.2909C11.9054 21.5899 12.1481 21.8325 12.4471 21.8325H12.446ZM12.446 27.6556H38.7675C39.0665 27.6556 39.3092 27.413 39.3092 27.114C39.3092 26.8149 39.0665 26.5723 38.7675 26.5723H12.4471C12.1481 26.5723 11.9054 26.8149 11.9054 27.114C11.9054 27.413 12.1481 27.6556 12.4471 27.6556H12.446ZM12.446 39.3018H32.6876C32.9867 39.3018 33.2293 39.0591 33.2293 38.7601C33.2293 38.4611 32.9867 38.2185 32.6876 38.2185H12.4471C12.1481 38.2185 11.9054 38.4611 11.9054 38.7601C11.9054 39.0591 12.1481 39.3018 12.4471 39.3018H12.446ZM12.446 33.4787H38.7675C39.0665 33.4787 39.3092 33.2361 39.3092 32.937C39.3092 32.638 39.0665 32.3954 38.7675 32.3954H12.4471C12.1481 32.3954 11.9054 32.638 11.9054 32.937C11.9054 33.2361 12.1481 33.4787 12.4471 33.4787H12.446ZM27.3824 48.6675C27.7215 47.4942 28.8753 46.114 30.0475 45.711C30.3703 45.5994 30.704 45.5344 30.9868 45.5572C31.1904 45.5734 31.4775 45.6525 31.4894 45.8984C31.4949 46.0079 31.4613 46.1487 31.38 46.3242C31.3248 46.4434 31.2728 46.5831 31.2305 46.7326C31.1243 47.1064 31.0832 47.5332 31.1763 47.9081C31.2879 48.3544 31.5837 48.6729 32.0257 48.7986C32.3583 48.8929 32.6974 48.83 32.9877 48.6697C33.3073 48.4931 33.4482 48.2883 33.6508 48.011C33.8663 47.7152 34.1134 47.3772 34.4113 47.1335C34.5044 47.0566 34.7211 46.9125 34.8511 46.9623C34.9432 46.9981 34.9963 47.1606 35.0147 47.2472C35.0645 47.4932 35.1361 47.7261 35.2076 47.9655C35.3744 48.5668 35.8836 48.9871 36.5 49.0608C37.0363 49.1247 37.5617 48.9189 37.942 48.5419L39.0643 47.4444C39.2908 47.2505 39.3178 46.9092 39.1239 46.6828C38.93 46.4564 38.5887 46.4293 38.3623 46.6232C38.2052 46.7575 37.4588 47.4986 37.2172 47.7391C37.0525 47.9027 36.8727 48.0153 36.6268 47.985C36.4426 47.9633 36.2985 47.8593 36.2487 47.6762C36.1891 47.4607 36.1176 47.2494 36.0732 47.0295C35.9757 46.5528 35.7048 46.1335 35.2368 45.9537C34.7027 45.7478 34.1534 45.9483 33.7309 46.2939C33.3279 46.6232 33.0365 47.0241 32.7808 47.3751C32.7039 47.4812 32.6194 47.608 32.5154 47.6892C32.4526 47.738 32.3811 47.7737 32.3193 47.7564C32.2413 47.7347 32.2261 47.6567 32.2153 47.5852C32.1904 47.4162 32.2196 47.2093 32.2716 47.0241C32.2976 46.932 32.329 46.8475 32.3615 46.776C32.5186 46.4358 32.5815 46.1249 32.5685 45.8464C32.5295 45.0242 31.8491 44.5388 31.0713 44.4771C30.6292 44.4413 30.1461 44.5312 29.6965 44.6862C28.1971 45.2029 26.7822 46.8616 26.3467 48.3663C26.2633 48.6524 26.429 48.9524 26.715 49.0348C27.0011 49.1182 27.3011 48.9524 27.3835 48.6664L27.3824 48.6675ZM6.54168 14.4375H12.3474C13.4991 14.4375 14.4383 13.4971 14.4383 12.3466V6.54083L6.54168 14.4375ZM40.0231 39.7948L44.0316 42.1088L40.4077 44.7317C40.034 45.0025 39.5161 44.7035 39.5638 44.2441L40.0231 39.7948ZM56.3895 21.1858L51.9629 18.6301L53.2337 16.4287C53.9357 15.2121 55.5077 14.7907 56.7243 15.4938C57.942 16.1969 58.3623 17.7678 57.6592 18.9844L56.3884 21.1858H56.3895Z"
+                  fill="#901630"
+                />
+              </svg>
+              <h2
+                class="text-[#901630] text-2xl font-semibold group-hover:text-white transition-colors duration-300"
+              >
+                Attestation on Signature
+              </h2>
+              <p
+                class="text-[#4A4A4A] text-lg flex-1 group-hover:text-white transition-colors duration-300"
+              >
+                Approving and attesting the authenticity of a signature on
+                documents.
+              </p>
+              <div class="mt-auto flex justify-end gap-4 duration-300">
+                <button
+                  class="font-semibold text-black group-hover:text-white group-hover:text-xl group-hover:scale-110 transition-all group-hover:-translate-y-1 duration-500"
+                >
+                  Get started
+                </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M9.53152 2.62758C9.24356 2.28203 8.70871 2.29518 8.43807 2.65445L7.83893 3.44981C7.64117 3.71233 7.65342 4.07727 7.86833 4.32595L14.1057 11.5435C14.3321 11.8055 14.3321 12.194 14.1057 12.456L7.86833 19.6735C7.65342 19.9222 7.64118 20.2872 7.83894 20.5497L8.43807 21.345C8.70871 21.7043 9.24356 21.7174 9.53152 21.3719L16.9694 12.4465C17.185 12.1877 17.185 11.8118 16.9694 11.553L9.53152 2.62758Z"
+                    fill="black"
+                    class="group-hover:fill-white transition-colors duration-300"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- card -->
+            <div
+              class="bg-white group hover:bg-[#901630] transition-colors duration-300 rounded-lg px-7 py-6 flex flex-col space-y-6 h-[430px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                fill="none"
+                class="group-hover:fill-white transition-colors duration-300"
+              >
+                <path
+                  class="group-hover:fill-white transition-colors duration-300"
+                  d="M17.9453 29.5391C19.9085 29.5391 21.5 27.9476 21.5 25.9844C21.5 24.0212 19.9085 22.4297 17.9453 22.4297C15.9821 22.4297 14.3906 24.0212 14.3906 25.9844C14.3906 27.9476 15.9821 29.5391 17.9453 29.5391Z"
+                  fill="#901630"
+                />
+                <path
+                  class="group-hover:fill-white transition-colors duration-300"
+                  d="M21.4552 29.8125C20.4981 30.6925 19.2454 31.1809 17.9453 31.1809C16.6452 31.1809 15.3925 30.6925 14.4355 29.8125C13.107 30.4648 11.9884 31.4771 11.207 32.734C10.4256 33.9908 10.0128 35.4419 10.0156 36.9219V38.0156C10.0156 38.0881 10.0444 38.1577 10.0957 38.209C10.147 38.2603 10.2166 38.2891 10.2891 38.2891H25.6016C25.6741 38.2891 25.7436 38.2603 25.7949 38.209C25.8462 38.1577 25.875 38.0881 25.875 38.0156V36.9219C25.8778 35.4419 25.4651 33.9908 24.6837 32.734C23.9023 31.4771 22.7836 30.4648 21.4552 29.8125Z"
+                  fill="#901630"
+                />
+                <path
+                  class="group-hover:fill-white transition-colors duration-300"
+                  d="M25.6016 18.0547H10.2891C10.2165 18.0547 10.147 18.0835 10.0957 18.1348C10.0444 18.1861 10.0156 18.2556 10.0156 18.3281V31.5538C10.8822 30.2766 12.0457 29.2287 13.4062 28.5C12.9681 27.7091 12.7439 26.8175 12.7559 25.9134C12.7679 25.0093 13.0157 24.124 13.4747 23.345C13.9337 22.566 14.588 21.9203 15.3731 21.4716C16.1581 21.023 17.0466 20.787 17.9508 20.787C18.855 20.787 19.7435 21.023 20.5285 21.4716C21.3135 21.9203 21.9679 22.566 22.4269 23.345C22.8859 24.124 23.1336 25.0093 23.1456 25.9134C23.1576 26.8175 22.9335 27.7091 22.4953 28.5C23.8519 29.2301 25.0115 30.2779 25.875 31.5538V18.3281C25.875 18.2556 25.8462 18.1861 25.7949 18.1348C25.7436 18.0835 25.6741 18.0547 25.6016 18.0547Z"
+                  fill="#901630"
+                />
+                <path
+                  class="group-hover:fill-white transition-colors duration-300"
+                  d="M53.7109 41.0234H42.7734C42.6224 41.0234 42.5 41.1459 42.5 41.2969V45.6719C42.5 45.8229 42.6224 45.9453 42.7734 45.9453H53.7109C53.862 45.9453 53.9844 45.8229 53.9844 45.6719V41.2969C53.9844 41.1459 53.862 41.0234 53.7109 41.0234Z"
+                  fill="#901630"
+                />
+                <path
+                  class="group-hover:fill-white transition-colors duration-300"
+                  d="M56.9922 12.0391H7.00781C6.21045 12.0402 5.44607 12.3575 4.88225 12.9213C4.31842 13.4851 4.00116 14.2495 4 15.0469V48.9531C4.00116 49.7505 4.31842 50.5149 4.88225 51.0787C5.44607 51.6425 6.21045 51.9598 7.00781 51.9609H56.9922C57.7896 51.9598 58.5539 51.6425 59.1178 51.0787C59.6816 50.5149 59.9988 49.7505 60 48.9531V15.0469C59.9988 14.2495 59.6816 13.4851 59.1178 12.9213C58.5539 12.3575 57.7896 12.0402 56.9922 12.0391ZM37.5048 20.7891H54.4219C54.6394 20.7891 54.8481 20.8755 55.0019 21.0293C55.1558 21.1832 55.2422 21.3918 55.2422 21.6094C55.2422 21.8269 55.1558 22.0356 55.0019 22.1894C54.8481 22.3433 54.6394 22.4297 54.4219 22.4297H37.5048C37.2873 22.4297 37.0786 22.3433 36.9248 22.1894C36.771 22.0356 36.6845 21.8269 36.6845 21.6094C36.6845 21.3918 36.771 21.1832 36.9248 21.0293C37.0786 20.8755 37.2873 20.7891 37.5048 20.7891ZM32.5469 20.7891H33.4219C33.6394 20.7891 33.8481 20.8755 34.0019 21.0293C34.1558 21.1832 34.2422 21.3918 34.2422 21.6094C34.2422 21.8269 34.1558 22.0356 34.0019 22.1894C33.8481 22.3433 33.6394 22.4297 33.4219 22.4297H32.5469C32.3293 22.4297 32.1207 22.3433 31.9668 22.1894C31.813 22.0356 31.7266 21.8269 31.7266 21.6094C31.7266 21.3918 31.813 21.1832 31.9668 21.0293C32.1207 20.8755 32.3293 20.7891 32.5469 20.7891ZM32.5469 26.2578H54.4219C54.6394 26.2578 54.8481 26.3442 55.0019 26.4981C55.1558 26.6519 55.2422 26.8606 55.2422 27.0781C55.2422 27.2957 55.1558 27.5043 55.0019 27.6582C54.8481 27.812 54.6394 27.8984 54.4219 27.8984H32.5469C32.3293 27.8984 32.1207 27.812 31.9668 27.6582C31.813 27.5043 31.7266 27.2957 31.7266 27.0781C31.7266 26.8606 31.813 26.6519 31.9668 26.4981C32.1207 26.3442 32.3293 26.2578 32.5469 26.2578ZM9.82422 47.5859H9.19531C8.97775 47.5859 8.7691 47.4995 8.61526 47.3457C8.46143 47.1918 8.375 46.9832 8.375 46.7656C8.375 46.5481 8.46143 46.3394 8.61526 46.1856C8.7691 46.0317 8.97775 45.9453 9.19531 45.9453H9.82422C10.0418 45.9453 10.2504 46.0317 10.4043 46.1856C10.5581 46.3394 10.6445 46.5481 10.6445 46.7656C10.6445 46.9832 10.5581 47.1918 10.4043 47.3457C10.2504 47.4995 10.0418 47.5859 9.82422 47.5859ZM26.6953 47.5859H13.9805C13.7629 47.5859 13.5543 47.4995 13.4004 47.3457C13.2466 47.1918 13.1602 46.9832 13.1602 46.7656C13.1602 46.5481 13.2466 46.3394 13.4004 46.1856C13.5543 46.0317 13.7629 45.9453 13.9805 45.9453H26.6953C26.9129 45.9453 27.1215 46.0317 27.2754 46.1856C27.4292 46.3394 27.5156 46.5481 27.5156 46.7656C27.5156 46.9832 27.4292 47.1918 27.2754 47.3457C27.1215 47.4995 26.9129 47.5859 26.6953 47.5859ZM27.5156 38.0156C27.515 38.5231 27.3132 39.0096 26.9544 39.3684C26.5955 39.7273 26.109 39.9291 25.6016 39.9297H10.2891C9.7816 39.9291 9.29509 39.7273 8.93626 39.3684C8.57742 39.0096 8.37558 38.5231 8.375 38.0156V18.3281C8.37558 17.8207 8.57742 17.3341 8.93626 16.9753C9.29509 16.6165 9.7816 16.4146 10.2891 16.4141H25.6016C26.109 16.4146 26.5955 16.6165 26.9544 16.9753C27.3132 17.3341 27.515 17.8207 27.5156 18.3281V38.0156ZM31.7266 32.5469C31.7266 32.3293 31.813 32.1207 31.9668 31.9668C32.1207 31.813 32.3293 31.7266 32.5469 31.7266H54.4219C54.6394 31.7266 54.8481 31.813 55.0019 31.9668C55.1558 32.1207 55.2422 32.3293 55.2422 32.5469C55.2422 32.7644 55.1558 32.9731 55.0019 33.1269C54.8481 33.2808 54.6394 33.3672 54.4219 33.3672H32.5469C32.3293 33.3672 32.1207 33.2808 31.9668 33.1269C31.813 32.9731 31.7266 32.7644 31.7266 32.5469ZM55.625 45.6719C55.6244 46.1793 55.4226 46.6659 55.0637 47.0247C54.7049 47.3835 54.2184 47.5854 53.7109 47.5859H42.7734C42.266 47.5854 41.7795 47.3835 41.4206 47.0247C41.0618 46.6659 40.86 46.1793 40.8594 45.6719V41.2969C40.86 40.7894 41.0618 40.3029 41.4206 39.9441C41.7795 39.5852 42.266 39.3834 42.7734 39.3828H53.7109C54.2184 39.3834 54.7049 39.5852 55.0637 39.9441C55.4226 40.3029 55.6244 40.7894 55.625 41.2969V45.6719Z"
+                  fill="#901630"
+                />
+              </svg>
+              <h2
+                class="text-[#901630] text-2xl font-semibold group-hover:text-white transition-colors duration-300"
+              >
+                ATA Carnet
+              </h2>
+              <p
+                class="text-[#4A4A4A] text-lg flex-1 group-hover:text-white transition-colors duration-300"
+              >
+                An internationally accepted Customs Document, issued by an
+                authorised Chamber of Commerce.
+              </p>
+              <div class="mt-auto flex justify-end gap-4 duration-300">
+                <button
+                  class="font-semibold text-black group-hover:text-white group-hover:text-xl group-hover:scale-110 transition-all group-hover:-translate-y-1 duration-500"
+                >
+                  Get started
+                </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M9.53152 2.62758C9.24356 2.28203 8.70871 2.29518 8.43807 2.65445L7.83893 3.44981C7.64117 3.71233 7.65342 4.07727 7.86833 4.32595L14.1057 11.5435C14.3321 11.8055 14.3321 12.194 14.1057 12.456L7.86833 19.6735C7.65342 19.9222 7.64118 20.2872 7.83894 20.5497L8.43807 21.345C8.70871 21.7043 9.24356 21.7174 9.53152 21.3719L16.9694 12.4465C17.185 12.1877 17.185 11.8118 16.9694 11.553L9.53152 2.62758Z"
+                    fill="black"
+                    class="group-hover:fill-white transition-colors duration-300"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <div class="flex items-center gap-[56px]">
+              <img src="assets/images/arrow.svg" alt="" class="rotate-180" />
+              <img src="assets/images/arrow.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our Impact in Numbers section -->
+    <section class="py-[107px]">
+      <div class="bannar-img py-[115px] relative">
+        <div class="absolute inset-0 w-full h-full bg-black/60"></div>
+        <div class="section-container relative z-[1] px-4">
+          <!-- section title -->
+          <div class="slide-right-2">
+            <div class="flex flex-col gap-2 mb-6">
+              <div class="w-[72px] h-[6px] bg-white rounded-[1px]"></div>
+              <h2 class="text-white text-[32px] font-bold">
+                Our Impact in Numbers
+              </h2>
+            </div>
+            <p class="text-lg w-[646px] text-white mb-12">
+              Driving growth and supporting Qatar’s business community through
+              trusted services and active engagement.
+            </p>
+          </div>
+
+          <!-- counts-container -->
+          <div class="flex items-center justify-between px-[68px] slide-left-2">
+            <!-- count card -->
+            <div class="flex flex-col justify-center items-center gap-2">
+              <h2 class="text-[40px] font-bold text-white">72,000+</h2>
+              <p class="text-lg font-semibold text-white">Member</p>
+            </div>
+            <!-- divider -->
+            <div class="h-[112px] w-[1px] bg-white"></div>
+            <!-- count card -->
+            <div class="flex flex-col justify-center items-center gap-2">
+              <h2 class="text-[40px] font-bold text-white">61,000+</h2>
+              <p class="text-lg font-semibold text-white">
+                Digital Transactions
+              </p>
+            </div>
+            <!-- divider -->
+            <div class="h-[112px] w-[1px] bg-white"></div>
+            <!-- count card -->
+            <div class="flex flex-col justify-center items-center gap-2">
+              <h2 class="text-[40px] font-bold text-white">44,000+</h2>
+              <p class="text-lg font-semibold text-white">
+                Digital Transactions
+              </p>
+            </div>
+            <!-- divider -->
+            <div class="h-[112px] w-[1px] bg-white"></div>
+            <!-- count card -->
+            <div class="flex flex-col justify-center items-center gap-2">
+              <h2 class="text-[40px] font-bold text-white">200+</h2>
+              <p class="text-lg font-semibold text-white">Events Organized</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+    <script>
+      let activeTab = null; // No default active tab
+
+      function toggleDropdown(tabId) {
+        // Hide all dropdowns
+        const allDropdowns = [
+          "aboutUs",
+          "ourServices",
+          "committee",
+          "newsEvents",
+          "investQatar",
+          "resources",
+        ];
+
+        allDropdowns.forEach((id) => {
+          const dropdown = document.getElementById(id + "Dropdown");
+          const button = document.querySelector(
+            `button[onclick="toggleDropdown('${id}')"]`
+          );
+          const arrow = document.getElementById(id + "Arrow");
+          const path = arrow.querySelector("path");
+
+          if (id === tabId) {
+            // Toggle the clicked dropdown
+            const isHidden = dropdown.classList.contains("hidden");
+            dropdown.classList.toggle("hidden");
+
+            // Set active state
+            if (isHidden) {
+              setActiveTab(id);
+              arrow.style.transform = "rotate(180deg)";
+            } else {
+              removeActiveTab(id);
+              arrow.style.transform = "rotate(0deg)";
+            }
+          } else {
+            // Hide other dropdowns and remove their active states
+            dropdown.classList.add("hidden");
+            removeActiveTab(id);
+            arrow.style.transform = "rotate(0deg)";
+          }
+        });
+      }
+
+      function setActiveTab(tabId) {
+        const button = document.querySelector(
+          `button[onclick="toggleDropdown('${tabId}')"]`
+        );
+        const path = button.querySelector("path");
+
+        // Set active styles
+        button.classList.remove("text-black");
+        button.classList.add(
+          "text-[#901630]",
+          "border-b-2",
+          "border-[#901630]"
+        );
+        path.setAttribute("stroke", "#901630");
+
+        activeTab = tabId;
+      }
+
+      function removeActiveTab(tabId) {
+        const button = document.querySelector(
+          `button[onclick="toggleDropdown('${tabId}')"]`
+        );
+        const path = button.querySelector("path");
+
+        // Remove active styles
+        button.classList.remove(
+          "text-[#901630]",
+          "border-b-2",
+          "border-[#901630]"
+        );
+        button.classList.add("text-black");
+        path.setAttribute("stroke", "black");
+      }
+
+      // Close dropdowns when clicking outside
+      document.addEventListener("click", function (event) {
+        const navContainer = document.querySelector(
+          ".flex.items-center.justify-center.px-7"
+        );
+        if (!navContainer.contains(event.target)) {
+          const allDropdowns = [
+            "aboutUs",
+            "ourServices",
+            "committee",
+            "newsEvents",
+            "investQatar",
+            "resources",
+          ];
+          allDropdowns.forEach((id) => {
+            const dropdown = document.getElementById(id + "Dropdown");
+            const arrow = document.getElementById(id + "Arrow");
+            dropdown.classList.add("hidden");
+            arrow.style.transform = "rotate(0deg)";
+            removeActiveTab(id);
+          });
+          activeTab = null;
+        }
+      });
+
+      const { animate, inView } = Motion;
+
+      inView(".slide-left-1", (target) => {
+        animate(
+          target,
+          { transform: ["translateX(200%)", "translateX(0)"] },
+          { duration: 1.5, type: "spring", stiffness: 50, delay: 0.2 }
+        );
+      });
+      inView(".slide-right-1", (target) => {
+        animate(
+          target,
+          { transform: ["translateX(-200%)", "translateX(0)"] },
+          { duration: 1.5, type: "spring", stiffness: 50, delay: 0.2 }
+        );
+      });
+      inView(".slide-left-2", (target) => {
+        animate(
+          target,
+          {
+            transform: ["translateX(200%)", "translateX(0px)"],
+          },
+          { duration: 1.5, type: "spring", stiffness: 50, delay: 0.2 }
+        );
+      });
+      inView(".slide-right-2", (target) => {
+        animate(
+          target,
+          { transform: ["translateX(-200%)", "translateX(0)"] },
+          { duration: 1.5, type: "spring", stiffness: 50, delay: 0.2 }
+        );
+      });
+    </script>
+  </body>
+</html>

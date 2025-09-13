@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "Cairo";
+  src: url("/assets/fonts/static/Cairo-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("/assets/fonts/static/Cairo-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("/assets/fonts/static/Cairo-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("/assets/fonts/static/Cairo-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+html body {
+  font-family: "Cairo", sans-serif;
+  overflow-x: hidden;
+}
+
+.section-container {
+  max-width: 1245px;
+  margin: 0 auto;
+}
+.services-background {
+  background-image: url("../assets/images/pattren-services.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
+}
+
+.bannar-img {
+  background-image: url("../assets/images/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
