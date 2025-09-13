@@ -6,12 +6,16 @@
     <title>QATAR CHAMBER</title>
     <link rel="stylesheet" href="style/global.css" />
     <link rel="stylesheet" href="style/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
     <!-- header -->
     <header
-      class="bg-white h-[112px] w-full flex justify-between"
+      class="bg-white h-[112px] relative w-full flex justify-between"
       style="box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1)"
     >
       <div
@@ -50,7 +54,7 @@
           <div
             class="flex items-center px-7 space-x-6 justify-center h-full w-full flex-1 border-r border-[#D9D9D9] relative"
           >
-            <div class="relative group">
+            <div class="relative group h-full">
               <button
                 class="text-black hover:text-[#901630] font-semibold flex items-center space-x-2 transition-colors duration-200 h-full pb-2"
                 onclick="toggleDropdown('aboutUs')"
@@ -76,36 +80,9 @@
                   />
                 </svg>
               </button>
-              <div
-                id="aboutUsDropdown"
-                class="hidden absolute top-full left-0 mt-2 w-64 bg-white shadow-lg border border-gray-200 rounded-lg z-50"
-              >
-                <div class="grid grid-cols-1 p-4 gap-2">
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >About Qatar Chamber</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Board of Directors</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Organization Chart</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Strategic Plan</a
-                  >
-                </div>
-              </div>
             </div>
 
-            <div class="relative group">
+            <div class="relative group h-full">
               <button
                 class="text-black hover:text-[#901630] font-semibold flex items-center space-x-2 transition-colors duration-200 h-full pb-2"
                 onclick="toggleDropdown('ourServices')"
@@ -131,36 +108,9 @@
                   />
                 </svg>
               </button>
-              <div
-                id="ourServicesDropdown"
-                class="hidden absolute top-full left-0 mt-2 w-64 bg-white shadow-lg border border-gray-200 rounded-lg z-50"
-              >
-                <div class="grid grid-cols-1 p-4 gap-2">
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Business Registration</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Certificate of Origin</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Legal Consulting</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Training Programs</a
-                  >
-                </div>
-              </div>
             </div>
 
-            <div class="relative group">
+            <div class="relative group h-full">
               <button
                 class="text-black hover:text-[#901630] font-semibold flex items-center space-x-2 transition-colors duration-200 h-full pb-2"
                 onclick="toggleDropdown('committee')"
@@ -186,36 +136,9 @@
                   />
                 </svg>
               </button>
-              <div
-                id="committeeDropdown"
-                class="hidden absolute top-full left-0 mt-2 w-64 bg-white shadow-lg border border-gray-200 rounded-lg z-50"
-              >
-                <div class="grid grid-cols-1 p-4 gap-2">
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Economic Committee</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Industrial Committee</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Commercial Committee</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Tourism Committee</a
-                  >
-                </div>
-              </div>
             </div>
 
-            <div class="relative group">
+            <div class="relative group h-full">
               <button
                 class="text-black hover:text-[#901630] font-semibold flex items-center space-x-2 transition-colors duration-200 h-full pb-2"
                 onclick="toggleDropdown('newsEvents')"
@@ -241,36 +164,9 @@
                   />
                 </svg>
               </button>
-              <div
-                id="newsEventsDropdown"
-                class="hidden absolute top-full left-0 mt-2 w-64 bg-white shadow-lg border border-gray-200 rounded-lg z-50"
-              >
-                <div class="grid grid-cols-1 p-4 gap-2">
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Latest News</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Upcoming Events</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Press Releases</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Event Gallery</a
-                  >
-                </div>
-              </div>
             </div>
 
-            <div class="relative group">
+            <div class="relative group h-full">
               <button
                 class="text-black hover:text-[#901630] font-semibold flex items-center space-x-2 transition-colors duration-200 h-full pb-2"
                 onclick="toggleDropdown('investQatar')"
@@ -296,36 +192,9 @@
                   />
                 </svg>
               </button>
-              <div
-                id="investQatarDropdown"
-                class="hidden absolute top-full left-0 mt-2 w-64 bg-white shadow-lg border border-gray-200 rounded-lg z-50"
-              >
-                <div class="grid grid-cols-1 p-4 gap-2">
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Investment Opportunities</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Business Setup Guide</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Economic Zones</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Investor Services</a
-                  >
-                </div>
-              </div>
             </div>
 
-            <div class="relative group">
+            <div class="relative group h-full">
               <button
                 class="text-black hover:text-[#901630] font-semibold flex items-center space-x-2 transition-colors duration-200 h-full pb-2"
                 onclick="toggleDropdown('resources')"
@@ -351,33 +220,6 @@
                   />
                 </svg>
               </button>
-              <div
-                id="resourcesDropdown"
-                class="hidden absolute top-full left-0 mt-2 w-64 bg-white shadow-lg border border-gray-200 rounded-lg z-50"
-              >
-                <div class="grid grid-cols-1 p-4 gap-2">
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Downloads</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Reports & Studies</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Statistics</a
-                  >
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-[#901630] py-2 px-3 rounded hover:bg-gray-50"
-                    >Publications</a
-                  >
-                </div>
-              </div>
             </div>
 
             <button
@@ -404,16 +246,731 @@
           </div>
         </div>
       </nav>
+      <div
+        id="aboutUsDropdown"
+        class="hidden absolute top-full left-0 w-full bg-white shadow-lg border border-gray-200 z-50 opacity-0 transition-opacity duration-300"
+      >
+        <div
+          class="grid grid-cols-6 gap-10 pt-[54px] pb-[115px] ps-[38px] pe-[120px]"
+        >
+          <!-- About Us Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              E-Services
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Certificate of origin online</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >ATA user guide</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >ATA apply online</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Verify ATA carnet</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold">TIR Carnet</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >B2B Registration</a
+              >
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Membership
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >New membership</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Membership Renewal</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Attestation on Signature</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Signatory Editing</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Commercial Invoice Attestation & Issuance of Certificate of
+                Origin</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Signatory Cancellation</a
+              >
+            </div>
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Legal services
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Legal consulting</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold">Mediation</a>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Trainings
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Training courses</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Custom registration system</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Online training</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Certificate validation</a
+              >
+            </div>
+          </div>
+          <div class="col-span-2">
+            <img
+              src="assets/images/sub-menu-img.png"
+              alt=""
+              class="w-[339px] h-[332px]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Our Services Dropdown -->
+      <div
+        id="ourServicesDropdown"
+        class="hidden absolute top-full left-0 w-full bg-white shadow-lg border border-gray-200 z-50 opacity-0 transition-opacity duration-300"
+      >
+        <div
+          class="grid grid-cols-6 gap-10 pt-[54px] pb-[115px] ps-[38px] pe-[120px]"
+        >
+          <!-- Membership Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Membership
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >New membership</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Membership Renewal</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Membership services</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Attestation on Signature</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Signatory Editing</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Signatory Cancellation</a
+              >
+            </div>
+          </div>
+
+          <!-- Certificates Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Certificates
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Certificate of origin online</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Commercial Invoice Attestation</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold">ATA Carnet</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold">TIR Carnet</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Verify ATA carnet</a
+              >
+            </div>
+          </div>
+
+          <!-- Legal Services Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Legal Services
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Legal consulting</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold">Mediation</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Arbitration Services</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Contract Review</a
+              >
+            </div>
+          </div>
+
+          <!-- Training Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Training
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Training courses</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Online training</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Certificate validation</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Food handlers certification</a
+              >
+            </div>
+          </div>
+
+          <!-- Featured Section -->
+          <div class="col-span-2">
+            <img
+              src="assets/images/sub-menu-img.png"
+              alt=""
+              class="w-[339px] h-[332px]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Committee Dropdown -->
+      <div
+        id="committeeDropdown"
+        class="hidden absolute top-full left-0 w-full bg-white shadow-lg border border-gray-200 z-50 opacity-0 transition-opacity duration-300"
+      >
+        <div
+          class="grid grid-cols-6 gap-10 pt-[54px] pb-[115px] ps-[38px] pe-[120px]"
+        >
+          <!-- Sectoral Committees Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Sectoral Committees
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Economic Committee</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Industrial Committee</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Commercial Committee</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Tourism Committee</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Agricultural Committee</a
+              >
+            </div>
+          </div>
+
+          <!-- Business Councils Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Business Councils
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Qatar-UK Business Council</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Qatar-US Business Council</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Qatar-Germany Business Council</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Qatar-India Business Council</a
+              >
+            </div>
+          </div>
+
+          <!-- Special Groups Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Special Groups
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Young Entrepreneurs Committee</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Women in Business</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >QAFL membership</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold">ICC Qatar</a>
+            </div>
+          </div>
+
+          <!-- Join & Participate Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Join & Participate
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Committee joining request</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Business council joining</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Meeting schedules</a
+              >
+            </div>
+          </div>
+
+          <!-- Featured Section -->
+          <div class="col-span-2">
+            <img
+              src="assets/images/sub-menu-img.png"
+              alt=""
+              class="w-[339px] h-[332px]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- News & Events Dropdown -->
+      <div
+        id="newsEventsDropdown"
+        class="hidden absolute top-full left-0 w-full bg-white shadow-lg border border-gray-200 z-50 opacity-0 transition-opacity duration-300"
+      >
+        <div
+          class="grid grid-cols-6 gap-10 pt-[54px] pb-[115px] ps-[38px] pe-[120px]"
+        >
+          <!-- Latest News Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Latest News
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold">Business News</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Economic Updates</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Press Releases</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Chamber Statements</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold">News Archive</a>
+            </div>
+          </div>
+
+          <!-- Events Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">Events</h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Upcoming Events</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Chamber Events</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold">Global Events</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold">Event Gallery</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Previous Events</a
+              >
+            </div>
+          </div>
+
+          <!-- Publications Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Publications
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Al-Moltaqa Magazine</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Annual Reports</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Economic Studies</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold">Newsletter</a>
+            </div>
+          </div>
+
+          <!-- Media Center Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Media Center
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold">Photo Gallery</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold">Video Gallery</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold">Media Kit</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold">Contact Media</a>
+            </div>
+          </div>
+
+          <!-- Featured Section -->
+          <div class="col-span-2">
+            <img
+              src="assets/images/sub-menu-img.png"
+              alt=""
+              class="w-[339px] h-[332px]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Invest in Qatar Dropdown -->
+      <div
+        id="investQatarDropdown"
+        class="hidden absolute top-full left-0 w-full bg-white shadow-lg border border-gray-200 z-50 opacity-0 transition-opacity duration-300"
+      >
+        <div
+          class="grid grid-cols-6 gap-10 pt-[54px] pb-[115px] ps-[38px] pe-[120px]"
+        >
+          <!-- Investment Opportunities Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Investment Opportunities
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Qatar at Glance</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Investment in Qatar</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Business Opportunities</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Economic Zones</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold">Free Zones</a>
+            </div>
+          </div>
+
+          <!-- Business Setup Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Business Setup
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Business Setup Guide</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold">Economic Laws</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Investor Services</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Business Registration</a
+              >
+            </div>
+          </div>
+
+          <!-- Support Services Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Support Services
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Visas & Immigration</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Hotel Partners</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Business Owners Platform</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Networking Events</a
+              >
+            </div>
+          </div>
+
+          <!-- Tenders & Opportunities Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Tenders & Opportunities
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold">Tenders</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Business Matchmaking</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Partnership Opportunities</a
+              >
+            </div>
+          </div>
+
+          <!-- Featured Section -->
+          <div class="col-span-2">
+            <img
+              src="assets/images/sub-menu-img.png"
+              alt=""
+              class="w-[339px] h-[332px]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Resources Dropdown -->
+      <div
+        id="resourcesDropdown"
+        class="hidden absolute top-full left-0 w-full bg-white shadow-lg border border-gray-200 z-50 opacity-0 transition-opacity duration-300"
+      >
+        <div
+          class="grid grid-cols-6 gap-10 pt-[54px] pb-[115px] ps-[38px] pe-[120px]"
+        >
+          <!-- Downloads Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Downloads
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Forms & Applications</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Guidelines & Manuals</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Certificates Templates</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Legal Documents</a
+              >
+            </div>
+          </div>
+
+          <!-- Reports & Studies Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Reports & Studies
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Economic Reports</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Market Studies</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Private Sector Export Reports</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Annual Statistics</a
+              >
+            </div>
+          </div>
+
+          <!-- Digital Services Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Digital Services
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold">B2B Platform</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Online Services Portal</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold">Mobile App</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Digital Certificates</a
+              >
+            </div>
+          </div>
+
+          <!-- Knowledge Base Column -->
+          <div class="space-y-4">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Knowledge Base
+            </h3>
+            <div class="space-y-4 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-semibold">FAQ</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold">User Guides</a>
+              <a href="#" class="text-[#4A4A4A] font-semibold"
+                >Video Tutorials</a
+              >
+              <a href="#" class="text-[#4A4A4A] font-semibold">Help Center</a>
+            </div>
+          </div>
+
+          <!-- Featured Section -->
+          <div class="col-span-2">
+            <img
+              src="assets/images/sub-menu-img.png"
+              alt=""
+              class="w-[339px] h-[332px]"
+            />
+          </div>
+        </div>
+      </div>
     </header>
     <!-- hero -->
-    <section class="w-full">
-      <video autoplay muted loop>
+    <section class="w-full h-screen relative pb-[60px]">
+      <video
+        class="absolute inset-0 w-full h-full object-cover"
+        autoplay
+        muted
+        loop
+      >
         <source
           src="https://cdn.hukoomi.gov.qa/videos/demo_video.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
       </video>
+      <div class="absolute inset-0 bg-black/10"></div>
+
+      <div
+        class="section-container flex items-end relative max-w-[1101px] h-full z-[1]"
+      >
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2">
+            <div class="w-[72px] h-[6px] bg-white rounded-[1px]"></div>
+            <h2 class="text-white text-[48px] font-bold max-w-[1101px]">
+              Qatari-Saudi Cooperation in the Field of Maritime Transport and
+              Shipping Discussed
+            </h2>
+          </div>
+          <button
+            class="border text-lg font-semibold border-white rounded-lg w-fit text-white px-6 py-4 hover:bg-[#901630] hover:border-[#901630] transition-colors duration-300"
+          >
+            Learn more
+          </button>
+          <button
+            class="w-[48px] h-[48px] bg-white rounded-[120px] flex items-center justify-center hover:bg-[#901630] transition-colors duration-300 group"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="22"
+              viewBox="0 0 16 22"
+              fill="none"
+              class="transition-colors duration-300"
+            >
+              <path
+                d="M4.3998 21.8C4.71806 21.8 5.02329 21.6736 5.24833 21.4485C5.47338 21.2235 5.5998 20.9182 5.5998 20.6V1.39999C5.5998 1.08173 5.47338 0.776501 5.24833 0.551458C5.02329 0.326414 4.71806 0.199987 4.3998 0.199987H1.9998C1.68154 0.199987 1.37632 0.326414 1.15128 0.551458C0.926233 0.776501 0.799805 1.08173 0.799805 1.39999V20.6C0.799805 20.9182 0.926233 21.2235 1.15128 21.4485C1.37632 21.6736 1.68154 21.8 1.9998 21.8H4.3998ZM13.9998 21.8C14.3181 21.8 14.6233 21.6736 14.8483 21.4485C15.0734 21.2235 15.1998 20.9182 15.1998 20.6V1.39999C15.1998 1.08173 15.0734 0.776501 14.8483 0.551458C14.6233 0.326414 14.3181 0.199987 13.9998 0.199987H11.5998C11.2815 0.199987 10.9763 0.326414 10.7513 0.551458C10.5262 0.776501 10.3998 1.08173 10.3998 1.39999V20.6C10.3998 20.9182 10.5262 21.2235 10.7513 21.4485C10.9763 21.6736 11.2815 21.8 11.5998 21.8H13.9998Z"
+                fill="#901630"
+                class="group-hover:fill-white"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex gap-[14px] absolute -bottom-8 left-1/2 -translate-x-1/2"
+        >
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="17"
+              height="34"
+              viewBox="0 0 17 34"
+              fill="none"
+            >
+              <path
+                d="M13.1141 32.6199C13.5941 33.1958 14.4855 33.1739 14.9366 32.5751L15.9351 31.2495C16.2647 30.812 16.2443 30.2037 15.8861 29.7893L5.49052 17.7601C5.1131 17.3234 5.1131 16.6759 5.49052 16.2392L15.8861 4.20995C16.2443 3.79548 16.2647 3.18726 15.9351 2.74972L14.9366 1.42414C14.4855 0.825355 13.5941 0.803455 13.1141 1.37937L0.717723 16.2551C0.358303 16.6864 0.358303 17.3129 0.717722 17.7442L13.1141 32.6199Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <div class="flex justify-center items-center space-x-6">
+            <div class="w-[12px] h-[12px] bg-white rounded-full"></div>
+            <div class="w-[12px] h-[12px] bg-white/60 rounded-full"></div>
+            <div class="w-[12px] h-[12px] bg-white/60 rounded-full"></div>
+            <div class="w-[12px] h-[12px] bg-white/60 rounded-full"></div>
+          </div>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="17"
+              height="34"
+              viewBox="0 0 17 34"
+              fill="none"
+              class="rotate-180"
+            >
+              <path
+                d="M13.1141 32.6199C13.5941 33.1958 14.4855 33.1739 14.9366 32.5751L15.9351 31.2495C16.2647 30.812 16.2443 30.2037 15.8861 29.7893L5.49052 17.7601C5.1131 17.3234 5.1131 16.6759 5.49052 16.2392L15.8861 4.20995C16.2443 3.79548 16.2647 3.18726 15.9351 2.74972L14.9366 1.42414C14.4855 0.825355 13.5941 0.803455 13.1141 1.37937L0.717723 16.2551C0.358303 16.6864 0.358303 17.3129 0.717722 17.7442L13.1141 32.6199Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- social sidebar -->
+      <div class="absolute right-8 top-[40px] flex flex-col justify-between">
+        <div class="flex flex-col gap-y-[12.64px]">
+          <div
+            class="w-[48px] h-[48px] bg-white rounded-[120px] flex items-center justify-center"
+          >
+            <img src="assets/images/linkedIN.svg" alt="" />
+          </div>
+          <div
+            class="w-[48px] h-[48px] bg-white rounded-[120px] flex items-center justify-center"
+          >
+            <img src="assets/images/x.svg" alt="" />
+          </div>
+          <div
+            class="w-[48px] h-[48px] bg-white rounded-[120px] flex items-center justify-center"
+          >
+            <img src="assets/images/youtube.svg" alt="" />
+          </div>
+          <div
+            class="w-[48px] h-[48px] bg-white rounded-[120px] flex items-center justify-center"
+          >
+            <img src="assets/images/social-arrow.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute right-0 flex flex-col items-center justify-center gap-16 bottom-[80px]"
+      >
+        <h2 class="font-semibold text-white -rotate-90">SCROLL DOWN</h2>
+        <div class="relative h-14 w-1 bg-white rounded-md">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="38"
+            height="18"
+            viewBox="0 0 24 12"
+            fill="none"
+            class="absolute top-4 left-1/2 -translate-x-1/2 z-[3]"
+          >
+            <path
+              d="M22.9387 3.09781C23.3419 2.76177 23.3266 2.1376 22.9073 1.82177L21.9791 1.12259C21.6728 0.891807 21.2469 0.906094 20.9567 1.15689L12.534 8.4358C12.2282 8.70007 11.7748 8.70007 11.469 8.4358L3.04628 1.15689C2.75607 0.906094 2.33019 0.891807 2.02383 1.12259L1.09567 1.82177C0.676409 2.1376 0.661072 2.76177 1.06432 3.09781L11.4802 11.7777C11.7822 12.0293 12.2208 12.0293 12.5228 11.7777L22.9387 3.09781Z"
+              fill="#fff"
+            />
+          </svg>
+        </div>
+      </div>
+      <img
+        src="assets/images/traiangle.svg"
+        alt=""
+        class="absolute right-[9.6px] bottom-0"
+      />
     </section>
     <!-- Qatar Chamber section -->
     <section class="py-[108px]">
@@ -434,7 +991,7 @@
             Qatar.
           </p>
           <button
-            class="border text-lg font-semibold border-black rounded-lg text-black px-6 py-4"
+            class="border text-lg font-semibold border-black rounded-lg text-black px-6 py-4 hover:bg-[#901630] hover:text-white hover:border-[#901630] transition-colors duration-300 flex items-center gap-2"
           >
             Explore more
           </button>
@@ -705,6 +1262,620 @@
         </div>
       </div>
     </section>
+    <!-- news section -->
+    <section class="pb-[107px]">
+      <div class="section-container px-4">
+        <div class="slide-right-1">
+          <!-- section header -->
+          <div class="flex items-center justify-between mb-[56px]">
+            <!-- section title -->
+            <div class="flex flex-col gap-2">
+              <div class="w-[72px] h-[6px] bg-black rounded-[1px]"></div>
+              <h2 class="text-black text-[32px] font-bold">Latest news</h2>
+            </div>
+            <button
+              class="border text-lg font-semibold border-black rounded-lg text-black px-6 py-4"
+            >
+              View all news
+            </button>
+          </div>
+          <div class="flex gap-[26px] bg-[#F4EEE9] rounded-lg mb-[56px]">
+            <!-- image -->
+            <div class="flex-shrink-0">
+              <img
+                src="assets/images/news-main.png"
+                alt="news main"
+                class="w-[619px] h-full rounded-s-lg object-cover"
+              />
+            </div>
+            <div class="py-[83px] pe-[4px] space-y-[19px]">
+              <h2 class="text-[28px] font-semibold">
+                Qatar Chamber Explores Cooperation with Sudanese Chambers Union
+              </h2>
+              <p class="text-[#4A4A4A] text-lg line-clamp-3">
+                H.E. Sheikh Khalifa bin Jassim bin Mohammed Al Thani, Chairman
+                of Qatar Chamber, met at the Chamber’s headquarters with H.E.
+                Mr. Saud Mamoun Al-Barir, President of the Sudanese Chambers
+                Union. The meeting discussed the relations between the two
+                brotherly countries, particularly in the commercial and economic
+                fields
+              </p>
+
+              <p class="text-[#4A4A4A] font-semibold text-lg">26 AUG 2025</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-6 relative">
+          <button class="absolute top-1/2 -end-16 -translate-y-1/2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              class="rotate-180"
+            >
+              <path
+                d="M28.937 42.7439C29.5129 43.435 30.5826 43.4087 31.1239 42.6901L32.3221 41.0994C32.7177 40.5744 32.6932 39.8445 32.2633 39.3471L19.7886 24.9121C19.3357 24.388 19.3357 23.6111 19.7886 23.087L32.2633 8.65195C32.6932 8.15459 32.7177 7.42472 32.3221 6.89967L31.1239 5.30898C30.5826 4.59043 29.5129 4.56416 28.937 5.25525L14.0613 23.1061C13.63 23.6237 13.63 24.3755 14.0613 24.893L28.937 42.7439Z"
+                fill="#901630"
+              />
+            </svg>
+          </button>
+          <button class="absolute top-1/2 -start-16 -translate-y-1/2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+            >
+              <path
+                d="M28.937 42.7439C29.5129 43.435 30.5826 43.4087 31.1239 42.6901L32.3221 41.0994C32.7177 40.5744 32.6932 39.8445 32.2633 39.3471L19.7886 24.9121C19.3357 24.388 19.3357 23.6111 19.7886 23.087L32.2633 8.65195C32.6932 8.15459 32.7177 7.42472 32.3221 6.89967L31.1239 5.30898C30.5826 4.59043 29.5129 4.56416 28.937 5.25525L14.0613 23.1061C13.63 23.6237 13.63 24.3755 14.0613 24.893L28.937 42.7439Z"
+                fill="#901630"
+              />
+            </svg>
+          </button>
+          <div class="rounded-lg overflow-hidden bg-[#F4EEE9]">
+            <img src="assets/images/news-1.png" alt="" />
+            <div class="p-6 flex flex-col gap-[19px]">
+              <h3 class="text-[#4A4A4A] font-semibold text-lg">26 AUG 2025</h3>
+              <h2 class="text-[24px] font-semibold">
+                Qatar Chamber Discusses Technology Cooperation with Uzbekistan
+              </h2>
+            </div>
+          </div>
+          <div class="rounded-lg overflow-hidden bg-[#F4EEE9]">
+            <img src="assets/images/news-2.png" alt="" />
+            <div class="p-6 flex flex-col gap-[19px]">
+              <h3 class="text-[#4A4A4A] font-semibold text-lg">26 AUG 2025</h3>
+              <h2 class="text-[24px] font-semibold">
+                Qatar Chamber Concludes Training program on ISO26000 CSR
+                Management System
+              </h2>
+            </div>
+          </div>
+          <div class="rounded-lg overflow-hidden bg-[#F4EEE9]">
+            <img src="assets/images/news-3.png" alt="" />
+            <div class="p-6 flex flex-col gap-[19px]">
+              <h3 class="text-[#4A4A4A] font-semibold text-lg">26 AUG 2025</h3>
+              <h2 class="text-[24px] font-semibold">
+                Qatar Chamber Explores Strengthening Ties with Islamabad Chamber
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <!-- footer -->
+    <footer class="bg-[#F8F8F8] relative">
+      <img
+        src="assets/images/top.svg"
+        alt="top-button"
+        class="absolute bottom-24 right-6 cursor-pointer"
+      />
+
+      <div class="mx-auto">
+        <div class="border-y border-[#D9D9D9]">
+          <div
+            class="py-8 xl:px-[100px] lg:px-20 md:px-12 px-6 flex flex-col md:flex-row md:justify-between md:items-center gap-6 max-w-[1536px] mx-auto"
+          >
+            <img src="assets/images/logo.png" alt="logo" class="h-10" />
+
+            <div
+              class="flex flex-col md:flex-row justify-between items-center gap-6"
+            >
+              <p class="text-[#4A4A4A] text-base font-semibold">
+                Connect with us
+              </p>
+              <div class="flex justify-between items-center gap-3">
+                <a
+                  href="https://www.linkedin.com/company/qatar-chamber"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img src="assets/images/linkedin-footer.svg" alt="linkedin"
+                /></a>
+                <a
+                  href="https://x.com/qatar_chamber"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img src="assets/images/x-footer.svg" alt="x"
+                /></a>
+                <a
+                  href="http://www.youtube.com/qatarchamber"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img src="assets/images/youtube-footer.svg" alt="youtube"
+                /></a>
+                <a
+                  href="http://www.instagram.com/qatarchamber"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    src="assets/images/instagram-footer.svg"
+                    alt="instagram"
+                /></a>
+                <a
+                  href="http://www.facebook.com/qatarchamber"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img src="assets/images/facebook-footer.svg" alt="facebook"
+                /></a>
+                <a
+                  href="https://www.whatsapp.com/channel/0029VaYLt6g2kNFk9OJYxT2l"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img src="assets/images/whatsapp-footer.svg" alt="whatsapp"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="xl:ps-28 xl:pe-14 lg:px-20 md:px-12 px-6 divide-x divide-[#D9D9D9] grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 place-content-between gap-16 max-w-[1536px] mx-auto grid-2-cols-fix grid-3-cols-fix grid-4-cols-fix"
+        >
+          <div class="first-column pt-6 pb-9.5 last:border-0">
+            <div class="about-us max-w-[208px]">
+              <h3 class="text-[#161115] text-lg font-bold h-[34px]">
+                About Us
+              </h3>
+
+              <ul class="flex flex-col gap-2 pt-4 pb-10">
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="block text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Qatar chamber</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Chamber’s law</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Chairman’s message</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Vision, mission, objectives</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >General manager’s message</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Board of directors</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Organizational structure</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="useful-links max-w-[208px]">
+              <h3 class="text-[#161115] text-lg font-bold h-[34px]">
+                Useful links
+              </h3>
+
+              <ul class="flex-col gap-2 flex pt-4 pb-10">
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="block text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >State of Qatar ministers</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Arab chambers</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Arab-foreign joint chambers</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Affiliated members</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Arab- foreign business councils</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="second-column pt-6 pb-9.5 last:border-0">
+            <div class="our-services max-w-[208px]">
+              <h3 class="text-[#161115] text-lg font-bold h-[34px]">
+                Our services
+              </h3>
+
+              <ul class="flex flex-col gap-2 pt-4 pb-10">
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="block text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >New membership</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Membership renewal</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Membership services</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Legal services</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Information</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Trainings</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Food handlers certification and authorization Training
+                    program</a
+                  >
+                </li>
+
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="block text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Halls reservation</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >B2B registration</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Certificate of origin online</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >ATA carnet</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >TIR carnet</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="third-column pt-6 pb-9.5 last:border-0">
+            <div class="committee max-w-[208px]">
+              <h3 class="text-[#161115] text-lg font-bold h-[34px]">
+                Committee
+              </h3>
+
+              <ul class="flex flex-col gap-2 pt-4 pb-10">
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="block text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Sectoral committee</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Sectoral committee</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >QAFL membership registration</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Committee joining request</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Business council joining request</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Suggestions and complaints</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >ICC Qatar</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Qatar international center for conciliation and
+                    Arbitration</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="new-events max-w-[208px]">
+              <h3 class="text-[#161115] text-lg font-bold h-[34px]">
+                News & Events
+              </h3>
+
+              <ul class="flex-col gap-2 flex pt-4 pb-10">
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="block text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Chamber events</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Chamber previous events</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Global events</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >News archive</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Al-Moltaqa magazine</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="fourth-column pt-6 pb-9.5 last:border-0">
+            <div class="invest-in-qatar max-w-[208px]">
+              <h3 class="text-[#161115] text-lg font-bold h-[34px]">
+                Invest in Qatar
+              </h3>
+
+              <ul class="flex flex-col gap-2 pt-4 pb-10">
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="block text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Hotel partners</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Qatar at glance</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Economic laws</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Visas & immigration</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Investment in Qatar</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Business opportunities</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Business owners platform</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Tenders</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="resources max-w-[208px]">
+              <h3 class="text-[#161115] text-lg font-bold h-[34px]">
+                Resources
+              </h3>
+
+              <ul class="flex-col gap-2 flex pt-4 pb-10">
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="block text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >B2B Platform</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Our Publications</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Private Sector Export Reports</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Business Matchmaking</a
+                  >
+                </li>
+                <li class="min-h-[30px]">
+                  <a
+                    href="#"
+                    class="text-[#4A4A4A] text-base font-semibold focus:underline decoration-1 focus:text-[#901630] focus:underline-offset-4"
+                    >Business Opportunities</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="relative border-t border-[#D9D9D9]">
+          <div
+            class="xl:ps-28 xl:pe-[100px] lg:px-20 md:px-12 px-6 py-[14px] flex flex-col md:flex-row justify-between items-center gap-4 max-w-[1536px] mx-auto"
+          >
+            <div class="flex flex-col md:flex-row items-center gap-4">
+              <p class="text-[#4A4A4A] text-base font-semibold">
+                © Copyright 2025, All Rights Reserved
+              </p>
+              <p class="text-[#4A4A4A] text-base font-semibold">
+                | &nbsp; &nbsp; Privacy Policy
+              </p>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <img src="assets/images/mail.svg" alt="mail" />
+
+              <p class="text-[#4A4A4A] text-base font-semibold">Contact Us</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
     <script>
       let activeTab = null; // No default active tab
@@ -731,19 +1902,39 @@
           if (id === tabId) {
             // Toggle the clicked dropdown
             const isHidden = dropdown.classList.contains("hidden");
-            dropdown.classList.toggle("hidden");
 
-            // Set active state
             if (isHidden) {
+              // Show dropdown with fade in
+              dropdown.classList.remove("hidden");
+              // Force reflow
+              dropdown.offsetHeight;
+              dropdown.classList.remove("opacity-0");
+              dropdown.classList.add("opacity-100");
+
               setActiveTab(id);
               arrow.style.transform = "rotate(180deg)";
             } else {
+              // Hide dropdown with fade out
+              dropdown.classList.remove("opacity-100");
+              dropdown.classList.add("opacity-0");
+
+              setTimeout(() => {
+                dropdown.classList.add("hidden");
+              }, 300); // Match transition duration
+
               removeActiveTab(id);
               arrow.style.transform = "rotate(0deg)";
             }
           } else {
-            // Hide other dropdowns and remove their active states
-            dropdown.classList.add("hidden");
+            // Hide other dropdowns with fade out
+            if (!dropdown.classList.contains("hidden")) {
+              dropdown.classList.remove("opacity-100");
+              dropdown.classList.add("opacity-0");
+
+              setTimeout(() => {
+                dropdown.classList.add("hidden");
+              }, 300); // Match transition duration
+            }
             removeActiveTab(id);
             arrow.style.transform = "rotate(0deg)";
           }
@@ -760,7 +1951,7 @@
         button.classList.remove("text-black");
         button.classList.add(
           "text-[#901630]",
-          "border-b-2",
+          "border-b-4",
           "border-[#901630]"
         );
         path.setAttribute("stroke", "#901630");
@@ -777,7 +1968,7 @@
         // Remove active styles
         button.classList.remove(
           "text-[#901630]",
-          "border-b-2",
+          "border-b-4",
           "border-[#901630]"
         );
         button.classList.add("text-black");
@@ -801,7 +1992,16 @@
           allDropdowns.forEach((id) => {
             const dropdown = document.getElementById(id + "Dropdown");
             const arrow = document.getElementById(id + "Arrow");
-            dropdown.classList.add("hidden");
+
+            if (!dropdown.classList.contains("hidden")) {
+              dropdown.classList.remove("opacity-100");
+              dropdown.classList.add("opacity-0");
+
+              setTimeout(() => {
+                dropdown.classList.add("hidden");
+              }, 300); // Match transition duration
+            }
+
             arrow.style.transform = "rotate(0deg)";
             removeActiveTab(id);
           });

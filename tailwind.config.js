@@ -1,9 +1,10 @@
 module.exports = {
- content: ["./**/*.html", "./style/**/*.{css,js}"], 
+  content: ["./**/*.html", "./style/**/*.{css,js}"],
   theme: {
     extend: {
       fontFamily: {
-        cairo: ['Cairo', 'sans-serif'],
+        sans: ["Cairo", "sans-serif"],
+        cairo: ["Cairo", "sans-serif"],
       },
     },
   },
