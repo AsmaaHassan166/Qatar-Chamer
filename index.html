@@ -17,14 +17,14 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
   <!-- header -->
   <header class="bg-white h-[112px] relative w-full flex justify-between"
     style="box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1)">
-    <div class="flex justify-center items-center h-full py-7 pe-5 ps-6 border-r border-[#D9D9D9]">
+    <div class="flex justify-center items-center h-full min-[1440px]:py-7  min-[1440px]:pe-5 min-[1440px]:ps-6 p-2 border-r border-[#D9D9D9]">
       <img src="assets/images/logo.png" alt="Qatar Chamber Logo" class="object-cover" />
     </div>
-    <nav class="flex flex-col h-full flex-1">
+    <nav class="hidden xl:flex flex-col h-full flex-1">
       <!-- top nav -->
       <div class="px-7 py-[6px] flex items-center border-b border-[#D9D9D9] w-full">
         <ul class="flex space-x-6 justify-end w-full">
@@ -146,6 +146,178 @@
         </div>
       </div>
     </nav>
+    <div class="xl:hidden flex items-center justify-end px-6 ">
+      <button onclick="toggleMobileMenu()" class="space-y-1.5 flex flex-col">
+        <span class="block w-6 h-0.5 bg-black"></span>
+        <span class="block w-6 h-0.5 bg-black"></span>
+        <span class="block w-6 h-0.5 bg-black"></span>
+      </button>
+    </div>
+
+<!-- MOBILE MENU (overlay) -->
+<div id="mobileMenu" class="hidden fixed top-0 left-0 w-screen  bg-white z-50 p-6 max-h-screen overflow-y-scroll">
+  <button onclick="toggleMobileMenu()" class="absolute top-4 right-4 text-2xl font-bold">&times;</button>
+
+  <ul class="space-y-4 pt-12 text-lg">
+    <!-- ABOUT US -->
+    <li>
+      <button onclick="toggleSubmenu('aboutUsMobile')" class="flex justify-between w-full font-semibold">
+        About Us
+        <span class="transform transition-transform" id="aboutUsMobileArrow">+</span>
+      </button>
+      <ul id="aboutUsMobile" class="hidden  text-base  flex flex-col gap-8 ps-2">
+        <!-- <div class=" pt-[54px] pb-[115px] ps-[38px] pe-[120px]"> -->
+          <!-- About Us Column -->
+          <li class="space-y-2 pt-6">
+            <h3 class="text-black text-base font-semibold uppercase">
+              E-Services
+            </h3>
+            <div class="space-y-2 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-regular">Certificate of origin online</a>
+              <a href="#" class="text-[#4A4A4A] font-regular">ATA user guide</a>
+              <a href="#" class="text-[#4A4A4A] font-regular">ATA apply online</a>
+              <a href="#" class="text-[#4A4A4A] font-regular">Verify ATA carnet</a>
+              <a href="#" class="text-[#4A4A4A] font-regular">TIR Carnet</a>
+              <a href="#" class="text-[#4A4A4A] font-regular">B2B Registration</a>
+            </div>
+          </li>
+  
+          <li class="space-y-2">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Membership
+            </h3>
+            <div class="space-y-2 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-regular">New membership</a>
+              <a href="#" class="text-[#4A4A4A] font-regular">Membership Renewal</a>
+              <a href="#" class="text-[#4A4A4A] font-regular">Attestation on Signature</a>
+              <a href="#" class="text-[#4A4A4A] font-regular">Signatory Editing</a>
+              <a href="#" class="text-[#4A4A4A] font-regular">Commercial Invoice Attestation & Issuance of Certificate of
+                Origin</a>
+              <a href="#" class="text-[#4A4A4A] font-regular">Signatory Cancellation</a>
+            </div>
+          </li>
+          <li class="space-y-2">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Legal services
+            </h3>
+            <div class="space-y-2 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-regular">Legal consulting</a>
+              <a href="#" class="text-[#4A4A4A] font-regular">Mediation</a>
+            </div>
+          </li>
+          <li class="space-y-2">
+            <h3 class="text-black text-base font-semibold uppercase">
+              Trainings
+            </h3>
+            <div class="space-y-2 flex flex-col">
+              <a href="#" class="text-[#4A4A4A] font-regular">Training courses</a>
+              <a href="#" class="text-[#4A4A4A] font-regular">Custom registration system</a>
+              <a href="#" class="text-[#4A4A4A] font-regular">Online training</a>
+              <a href="#" class="text-[#4A4A4A] font-regular">Certificate validation</a>
+            </div>
+          </li>
+         
+        <!-- </div> -->
+      </ul>
+    </li>
+
+    <!-- OUR SERVICES -->
+    <li>
+      <button onclick="toggleSubmenu('ourServicesMobile')" class="flex justify-between w-full font-semibold">
+        Our Services
+        <span class="transform transition-transform" id="ourServicesMobileArrow">+</span>
+      </button>
+      <ul id="ourServicesMobile" class="hidden  text-base  flex flex-col gap-8 ps-2">
+         <!-- Membership Column -->
+         <li class="space-y-2 pt-6">
+          <h3 class="text-black text-base font-semibold uppercase">
+            Membership
+          </h3>
+          <div class="space-y-4 flex flex-col">
+            <a href="#" class="text-[#4A4A4A] font-regular">New membership</a>
+            <a href="#" class="text-[#4A4A4A] font-regular">Membership Renewal</a>
+            <a href="#" class="text-[#4A4A4A] font-regular">Membership services</a>
+            <a href="#" class="text-[#4A4A4A] font-regular">Attestation on Signature</a>
+            <a href="#" class="text-[#4A4A4A] font-regular">Signatory Editing</a>
+            <a href="#" class="text-[#4A4A4A] font-regular">Signatory Cancellation</a>
+          </div>
+        </li>
+
+        <!-- Certificates Column -->
+        <li class="space-y-2 ">
+          <h3 class="text-black text-base font-semibold uppercase">
+            Certificates
+          </h3>
+          <div class="space-y-4 flex flex-col">
+            <a href="#" class="text-[#4A4A4A] font-regular">Certificate of origin online</a>
+            <a href="#" class="text-[#4A4A4A] font-regular">Commercial Invoice Attestation</a>
+            <a href="#" class="text-[#4A4A4A] font-regular">ATA Carnet</a>
+            <a href="#" class="text-[#4A4A4A] font-regular">TIR Carnet</a>
+            <a href="#" class="text-[#4A4A4A] font-regular">Verify ATA carnet</a>
+          </div>
+        </li>
+
+        <!-- Legal Services Column -->
+        <li class="space-y-2 ">
+          <h3 class="text-black text-base font-semibold uppercase">
+            Legal Services
+          </h3>
+          <div class="space-y-4 flex flex-col">
+            <a href="#" class="text-[#4A4A4A] font-regular">Legal consulting</a>
+            <a href="#" class="text-[#4A4A4A] font-regular">Mediation</a>
+            <a href="#" class="text-[#4A4A4A] font-regular">Arbitration Services</a>
+            <a href="#" class="text-[#4A4A4A] font-regular">Contract Review</a>
+          </div>
+        </li>
+
+        <!-- Training Column -->
+        <li class="space-y-2 ">
+          <h3 class="text-black text-base font-semibold uppercase">
+            Training
+          </h3>
+          <div class="space-y-4 flex flex-col">
+            <a href="#" class="text-[#4A4A4A] font-regular">Training courses</a>
+            <a href="#" class="text-[#4A4A4A] font-regular">Online training</a>
+            <a href="#" class="text-[#4A4A4A] font-regular">Certificate validation</a>
+            <a href="#" class="text-[#4A4A4A] font-regular">Food handlers certification</a>
+          </div>
+        </li>
+      </ul>
+    </li>
+
+    <!-- COMMITTEE -->
+    <li>
+      <button onclick="toggleSubmenu('committeeMobile')" class="flex justify-between w-full font-semibold">
+        Committee
+        <span class="transform transition-transform" id="committeeMobileArrow">+</span>
+      </button>
+      <ul id="committeeMobile" class="hidden pl-4 space-y-2 text-base text-gray-600">
+        <li><a href="#">Economic Committee</a></li>
+        <li><a href="#">Industrial Committee</a></li>
+        <li><a href="#">Tourism Committee</a></li>
+        <li><a href="#">Agricultural Committee</a></li>
+      </ul>
+    </li>
+
+    <!-- ADD OTHER MENU ITEMS THE SAME WAY -->
+    <li><a href="#" class="block font-semibold">News & Events</a></li>
+    <li><a href="#" class="block font-semibold">Invest in Qatar</a></li>
+    <li><a href="#" class="block font-semibold">Resources</a></li>
+    <li><a href="#" class="block font-semibold">Useful links</a></li>
+    <li><a href="#" class="block font-semibold">Contact us</a></li>
+    <li><a href="#" class="block font-semibold">العربية</a></li>
+
+    <!-- LOGIN & SIGN UP -->
+    <div class="mt-6 flex flex-col gap-3">
+      <button class="max-w-[300px] text-lg font-semibold text-[#901630] border border-[#901630] rounded-lg h-[48px]">Login</button>
+      <button class="max-w-[300px] text-lg font-semibold text-white bg-[#901630] border border-[#901630] rounded-lg h-[48px]">
+        Create account
+      </button>
+    </div>
+  </ul>
+</div>
+
+
     <div id="aboutUsDropdown"
       class="hidden absolute top-full left-0 w-full bg-white shadow-lg border border-gray-200 z-50 opacity-0 transition-opacity duration-300">
       <div class="grid grid-cols-6 gap-10 pt-[54px] pb-[115px] ps-[38px] pe-[120px]">
@@ -521,7 +693,10 @@
         </div>
       </div>
     </div>
+
   </header>
+
+    
   <!-- hero -->
   <section class="w-full h-screen relative pb-[60px]">
     <video id="heroVideo" class="absolute inset-0 w-full h-full object-cover" autoplay muted loop>
@@ -539,7 +714,7 @@
             <div class="flex flex-col gap-4">
               <div class="flex flex-col gap-2">
                 <div class="w-[72px] h-[6px] bg-white rounded-[1px]"></div>
-                <h2 class="text-white text-[48px] font-bold max-w-[1101px]">
+                <h2 class="text-white md:text-[48px] text-[32px] font-bold max-w-[1101px]">
                   Simplify your business setup in Doha with expert support and strong connections.
                 </h2>
               </div>
@@ -573,7 +748,7 @@
             <div class="flex flex-col h-full gap-4">
               <div class="flex flex-col gap-2">
                 <div class="w-[72px] h-[6px] bg-white rounded-[1px]"></div>
-                <h2 class="text-white text-[48px] font-bold max-w-[1101px]">
+                <h2 class="text-white md:text-[48px] text-[32px] font-bold max-w-[1101px]">
                   Simplify your business setup in Doha with expert support and strong connections.
                 </h2>
               </div>
@@ -607,7 +782,7 @@
             <div class="flex flex-col gap-4">
               <div class="flex flex-col gap-2">
                 <div class="w-[72px] h-[6px] bg-white rounded-[1px]"></div>
-                <h2 class="text-white text-[48px] font-bold max-w-[1101px]">
+                <h2 class="text-white md:text-[48px] text-[32px] font-bold max-w-[1101px]">
                   Simplify your business setup in Doha with expert support and strong connections.
                 </h2>
               </div>
@@ -641,7 +816,7 @@
             <div class="flex flex-col gap-4">
               <div class="flex flex-col gap-2">
                 <div class="w-[72px] h-[6px] bg-white rounded-[1px]"></div>
-                <h2 class="text-white text-[48px] font-bold max-w-[1101px]">
+                <h2 class="text-white md:text-[48px] text-[32px] font-bold max-w-[1101px]">
                   Simplify your business setup in Doha with expert support and strong connections.
                 </h2>
               </div>
@@ -772,7 +947,7 @@
   </section>
   <!-- Qatar Chamber section -->
   <section class="py-[108px]">
-    <div class="section-container px-4 flex gap-10">
+    <div class="section-container px-4 flex lg:flex-row flex-col gap-10">
       <div class="py-20 space-y-6">
         <div class="flex flex-col gap-2">
           <div class="w-[72px] h-[6px] bg-[#901630] rounded-[1px]"></div>
@@ -795,7 +970,7 @@
       </div>
       <!-- image -->
       <div class="flex-shrink-0">
-        <img src="assets/images/qatar-chamber.jpeg" alt="Qatar Chamber" class="w-[717px] h-[529px] rounded-lg" />
+        <img src="assets/images/qatar-chamber.jpeg" alt="Qatar Chamber" class="xl:w-[717px]  xl:h-[529px] lg:w-[617px] lg:h-[470px] h-[370px] mx-auto rounded-lg" />
       </div>
     </div>
   </section>
@@ -810,16 +985,17 @@
           <div class="w-[72px] h-[6px] bg-black rounded-[1px]"></div>
           <h2 class="text-black text-[32px] font-bold">Our services</h2>
         </div>
-        <button class="border text-lg font-semibold border-black rounded-lg text-black px-6 py-4">
+        <button class="border text-lg font-semibold border-black rounded-lg text-black px-6 py-4 hover:bg-[#901630] hover:text-white hover:border-[#901630] transition-colors duration-300 flex items-center gap-2">
           View all services
         </button>
       </div>
-      <div class="slide-right-1">
+      <div class="slide-right-1 ">
         <!-- grid container -->
-        <div class="grid grid-cols-3 gap-6 py-[56px]">
+         <div class="services-swiper swiper">
+        <div class="swiper-wrapper py-[56px]">
           <!-- card -->
           <div
-            class="bg-white group hover:bg-[#901630] transition-colors duration-300 rounded-lg px-7 py-6 flex flex-col space-y-6 h-[430px]">
+            class="swiper-slide bg-white group hover:bg-[#901630] transition-colors duration-300 rounded-lg px-7 py-6 flex flex-col space-y-6 h-[430px]">
             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
               <path
                 d="M60 31.998C59.9999 37.5358 58.3577 42.9491 55.281 47.5536C52.2043 52.1581 47.8313 55.7468 42.7151 57.866C37.5988 59.9852 31.9691 60.5397 26.5377 59.4594C21.1063 58.379 16.1172 55.7124 12.2014 51.7966C9.59315 49.2027 7.52531 46.1173 6.11756 42.7188C4.70981 39.3204 3.9901 35.6764 4.0001 31.998C4.0001 31.7584 4.09526 31.5287 4.26465 31.3593C4.43404 31.1899 4.66378 31.0947 4.90333 31.0947C5.14288 31.0947 5.37262 31.1899 5.542 31.3593C5.71139 31.5287 5.80655 31.7584 5.80655 31.998C5.80655 46.4411 17.5569 58.1915 32.0001 58.1915C46.4432 58.1915 58.1936 46.4411 58.1936 31.998C58.1936 17.5565 46.4432 5.80763 32.0001 5.80763C26.1356 5.80117 20.44 7.77018 15.8317 11.3971L18.0597 11.6191C18.2906 11.6417 18.5039 11.7522 18.6555 11.9278C18.8071 12.1034 18.8853 12.3306 18.8739 12.5623C18.8625 12.794 18.7624 13.0125 18.5944 13.1724C18.4263 13.3323 18.2032 13.4214 17.9712 13.4212C17.9411 13.4212 17.911 13.4197 17.8808 13.4167L13.5122 12.9814C13.2738 12.9576 13.0547 12.8401 12.9029 12.6548C12.7512 12.4695 12.6793 12.2315 12.703 11.9931L13.1382 7.6248C13.1486 7.50571 13.1826 7.38987 13.2381 7.284C13.2936 7.17812 13.3695 7.08431 13.4616 7.00802C13.5536 6.93172 13.6599 6.87445 13.7742 6.83953C13.8885 6.80461 14.0086 6.79273 14.1276 6.80458C14.2465 6.81643 14.362 6.85177 14.4671 6.90857C14.5723 6.96536 14.6652 7.04246 14.7404 7.13542C14.8155 7.22837 14.8715 7.33532 14.905 7.45006C14.9386 7.56481 14.949 7.68507 14.9357 7.80386L14.7196 9.97375C18.8507 6.73195 23.8103 4.71735 29.032 4.16007C34.2536 3.60278 39.5266 4.52527 44.2489 6.82218C48.9712 9.11908 52.9523 12.6978 55.7376 17.1496C58.5228 21.6013 59.9998 26.7467 60 31.998ZM32.4165 35.5803C35.3475 35.5803 36.7972 32.8216 37.2503 30.3471C35.2492 30.1048 33.3912 29.6245 31.0561 27.9166L27.5323 30.0515C27.6993 31.2029 28.0899 32.3105 28.6821 33.3119C29.6097 34.817 30.8661 35.5803 32.4165 35.5803ZM37.6735 37.3867H27.1629C24.7623 37.3867 22.8092 39.1698 22.8092 41.3616V43.5406C25.5669 45.7423 29.0233 46.8809 32.5496 46.7493C36.0759 46.6178 39.4379 45.2249 42.0239 42.8239V41.3616C42.0239 39.1698 40.0726 37.3867 37.6735 37.3867ZM31.6697 26.1154C33.8723 27.8418 35.5296 28.312 37.4096 28.5464C37.385 27.2882 36.8864 26.0857 36.0134 25.1793C35.1404 24.2729 33.9574 23.7296 32.701 23.6579C31.4446 23.5862 30.2075 23.9915 29.237 24.7926C28.2666 25.5938 27.6344 26.7318 27.4669 27.9791L30.6445 26.0538C30.8014 25.9588 30.9836 25.9137 31.1667 25.9247C31.3498 25.9357 31.5253 26.0022 31.6697 26.1154ZM32.0001 17.236C23.8603 17.236 17.2381 23.8582 17.2381 31.998C17.2353 35.6291 18.5763 39.1328 21.0027 41.8341V41.3616C21.0027 38.1736 23.7663 35.5803 27.1629 35.5803H28.1633C27.7764 35.1784 27.4347 34.7355 27.1442 34.2593C26.1863 32.7051 25.6146 30.6064 25.6146 28.6453C25.6146 27.7521 25.7905 26.8676 26.1324 26.0423C26.4742 25.2171 26.9752 24.4672 27.6068 23.8356C28.2385 23.204 28.9883 22.703 29.8136 22.3611C30.6388 22.0193 31.5233 21.8434 32.4165 21.8434C33.3098 21.8434 34.1943 22.0193 35.0195 22.3611C35.8448 22.703 36.5946 23.204 37.2263 23.8356C37.8579 24.4672 38.3589 25.2171 38.7007 26.0423C39.0426 26.8676 39.2185 27.7521 39.2185 28.6453C39.2185 30.6872 38.6427 32.7645 37.6379 34.3444C37.356 34.7898 37.0276 35.2039 36.6582 35.5798H37.6743C40.886 35.5798 43.5296 37.9012 43.8058 40.8508C45.7281 38.2998 46.7662 35.1917 46.7628 31.9975C46.762 23.8582 40.1404 17.236 32.0001 17.236Z"
@@ -828,7 +1004,7 @@
             <h2 class="text-[#901630] text-2xl font-semibold group-hover:text-white transition-colors duration-300">
               Membership Renewal
             </h2>
-            <p class="text-[#4A4A4A] text-lg flex-1 group-hover:text-white transition-colors duration-300">
+            <p class="text-[#4A4A4A] text-lg flex-1 h-[200px] group-hover:text-white transition-colors duration-300">
               Members (institutions/companies) registered with the Chamber
               should renew their membership in order to keep practicing their
               economic activities.
@@ -847,7 +1023,7 @@
           </div>
           <!-- card -->
           <div
-            class="bg-white group hover:bg-[#901630] transition-colors duration-300 rounded-lg px-7 py-6 flex flex-col space-y-6 h-[430px]">
+            class="swiper-slide bg-white group hover:bg-[#901630] transition-colors duration-300 rounded-lg px-7 py-6 flex flex-col space-y-6 h-[430px]">
             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 class="group-hover:fill-white transition-colors duration-300"
@@ -857,7 +1033,7 @@
             <h2 class="text-[#901630] text-2xl font-semibold group-hover:text-white transition-colors duration-300">
               Attestation on Signature
             </h2>
-            <p class="text-[#4A4A4A] text-lg flex-1 group-hover:text-white transition-colors duration-300">
+            <p class="text-[#4A4A4A] text-lg flex-1 h-[200px] group-hover:text-white transition-colors duration-300">
               Approving and attesting the authenticity of a signature on
               documents.
             </p>
@@ -875,7 +1051,7 @@
           </div>
           <!-- card -->
           <div
-            class="bg-white group hover:bg-[#901630] transition-colors duration-300 rounded-lg px-7 py-6 flex flex-col space-y-6 h-[430px]">
+            class=" swiper-slide bg-white group hover:bg-[#901630] transition-colors duration-300 rounded-lg px-7 py-6 flex flex-col space-y-6 h-[430px]">
             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none"
               class="group-hover:fill-white transition-colors duration-300">
               <path class="group-hover:fill-white transition-colors duration-300"
@@ -897,7 +1073,7 @@
             <h2 class="text-[#901630] text-2xl font-semibold group-hover:text-white transition-colors duration-300">
               ATA Carnet
             </h2>
-            <p class="text-[#4A4A4A] text-lg flex-1 group-hover:text-white transition-colors duration-300">
+            <p class="text-[#4A4A4A] text-lg flex-1 h-[200px] group-hover:text-white transition-colors duration-300">
               An internationally accepted Customs Document, issued by an
               authorised Chamber of Commerce.
             </p>
@@ -913,12 +1089,41 @@
               </svg>
             </div>
           </div>
+            <!-- card -->
+            <div
+            class="swiper-slide bg-white group hover:bg-[#901630] transition-colors duration-300 rounded-lg px-7 py-6 flex flex-col space-y-6 h-[430px]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <path
+                d="M60 31.998C59.9999 37.5358 58.3577 42.9491 55.281 47.5536C52.2043 52.1581 47.8313 55.7468 42.7151 57.866C37.5988 59.9852 31.9691 60.5397 26.5377 59.4594C21.1063 58.379 16.1172 55.7124 12.2014 51.7966C9.59315 49.2027 7.52531 46.1173 6.11756 42.7188C4.70981 39.3204 3.9901 35.6764 4.0001 31.998C4.0001 31.7584 4.09526 31.5287 4.26465 31.3593C4.43404 31.1899 4.66378 31.0947 4.90333 31.0947C5.14288 31.0947 5.37262 31.1899 5.542 31.3593C5.71139 31.5287 5.80655 31.7584 5.80655 31.998C5.80655 46.4411 17.5569 58.1915 32.0001 58.1915C46.4432 58.1915 58.1936 46.4411 58.1936 31.998C58.1936 17.5565 46.4432 5.80763 32.0001 5.80763C26.1356 5.80117 20.44 7.77018 15.8317 11.3971L18.0597 11.6191C18.2906 11.6417 18.5039 11.7522 18.6555 11.9278C18.8071 12.1034 18.8853 12.3306 18.8739 12.5623C18.8625 12.794 18.7624 13.0125 18.5944 13.1724C18.4263 13.3323 18.2032 13.4214 17.9712 13.4212C17.9411 13.4212 17.911 13.4197 17.8808 13.4167L13.5122 12.9814C13.2738 12.9576 13.0547 12.8401 12.9029 12.6548C12.7512 12.4695 12.6793 12.2315 12.703 11.9931L13.1382 7.6248C13.1486 7.50571 13.1826 7.38987 13.2381 7.284C13.2936 7.17812 13.3695 7.08431 13.4616 7.00802C13.5536 6.93172 13.6599 6.87445 13.7742 6.83953C13.8885 6.80461 14.0086 6.79273 14.1276 6.80458C14.2465 6.81643 14.362 6.85177 14.4671 6.90857C14.5723 6.96536 14.6652 7.04246 14.7404 7.13542C14.8155 7.22837 14.8715 7.33532 14.905 7.45006C14.9386 7.56481 14.949 7.68507 14.9357 7.80386L14.7196 9.97375C18.8507 6.73195 23.8103 4.71735 29.032 4.16007C34.2536 3.60278 39.5266 4.52527 44.2489 6.82218C48.9712 9.11908 52.9523 12.6978 55.7376 17.1496C58.5228 21.6013 59.9998 26.7467 60 31.998ZM32.4165 35.5803C35.3475 35.5803 36.7972 32.8216 37.2503 30.3471C35.2492 30.1048 33.3912 29.6245 31.0561 27.9166L27.5323 30.0515C27.6993 31.2029 28.0899 32.3105 28.6821 33.3119C29.6097 34.817 30.8661 35.5803 32.4165 35.5803ZM37.6735 37.3867H27.1629C24.7623 37.3867 22.8092 39.1698 22.8092 41.3616V43.5406C25.5669 45.7423 29.0233 46.8809 32.5496 46.7493C36.0759 46.6178 39.4379 45.2249 42.0239 42.8239V41.3616C42.0239 39.1698 40.0726 37.3867 37.6735 37.3867ZM31.6697 26.1154C33.8723 27.8418 35.5296 28.312 37.4096 28.5464C37.385 27.2882 36.8864 26.0857 36.0134 25.1793C35.1404 24.2729 33.9574 23.7296 32.701 23.6579C31.4446 23.5862 30.2075 23.9915 29.237 24.7926C28.2666 25.5938 27.6344 26.7318 27.4669 27.9791L30.6445 26.0538C30.8014 25.9588 30.9836 25.9137 31.1667 25.9247C31.3498 25.9357 31.5253 26.0022 31.6697 26.1154ZM32.0001 17.236C23.8603 17.236 17.2381 23.8582 17.2381 31.998C17.2353 35.6291 18.5763 39.1328 21.0027 41.8341V41.3616C21.0027 38.1736 23.7663 35.5803 27.1629 35.5803H28.1633C27.7764 35.1784 27.4347 34.7355 27.1442 34.2593C26.1863 32.7051 25.6146 30.6064 25.6146 28.6453C25.6146 27.7521 25.7905 26.8676 26.1324 26.0423C26.4742 25.2171 26.9752 24.4672 27.6068 23.8356C28.2385 23.204 28.9883 22.703 29.8136 22.3611C30.6388 22.0193 31.5233 21.8434 32.4165 21.8434C33.3098 21.8434 34.1943 22.0193 35.0195 22.3611C35.8448 22.703 36.5946 23.204 37.2263 23.8356C37.8579 24.4672 38.3589 25.2171 38.7007 26.0423C39.0426 26.8676 39.2185 27.7521 39.2185 28.6453C39.2185 30.6872 38.6427 32.7645 37.6379 34.3444C37.356 34.7898 37.0276 35.2039 36.6582 35.5798H37.6743C40.886 35.5798 43.5296 37.9012 43.8058 40.8508C45.7281 38.2998 46.7662 35.1917 46.7628 31.9975C46.762 23.8582 40.1404 17.236 32.0001 17.236Z"
+                fill="#901630" class="group-hover:fill-white transition-colors duration-300" />
+            </svg>
+            <h2 class="text-[#901630] text-2xl font-semibold group-hover:text-white transition-colors duration-300">
+              Membership Renewal
+            </h2>
+            <p class="text-[#4A4A4A] text-lg flex-1 h-[200px] group-hover:text-white transition-colors duration-300">
+              Members (institutions/companies) registered with the Chamber
+              should renew their membership in order to keep practicing their
+              economic activities.
+            </p>
+            <div class="mt-auto flex justify-end gap-4 duration-300">
+              <button
+                class="font-semibold text-black group-hover:text-white group-hover:text-xl group-hover:scale-110 transition-all group-hover:-translate-y-1 duration-500">
+                Get started
+              </button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M9.53152 2.62758C9.24356 2.28203 8.70871 2.29518 8.43807 2.65445L7.83893 3.44981C7.64117 3.71233 7.65342 4.07727 7.86833 4.32595L14.1057 11.5435C14.3321 11.8055 14.3321 12.194 14.1057 12.456L7.86833 19.6735C7.65342 19.9222 7.64118 20.2872 7.83894 20.5497L8.43807 21.345C8.70871 21.7043 9.24356 21.7174 9.53152 21.3719L16.9694 12.4465C17.185 12.1877 17.185 11.8118 16.9694 11.553L9.53152 2.62758Z"
+                  fill="black" class="group-hover:fill-white transition-colors duration-300" />
+              </svg>
+            </div>
+          </div>
         </div>
         <div class="flex justify-end">
-          <div class="flex items-center gap-[56px]">
-            <img src="assets/images/arrow.svg" alt="" class="rotate-180" />
-            <img src="assets/images/arrow.svg" alt="" />
+          <div class="flex items-center gap-[56px] ">
+            <img src="assets/images/arrow.svg" alt="" class="rotate-180 services-swiper-button-next" />
+            <img src="assets/images/arrow.svg" alt="" class=" services-swiper-button-prev"/>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -936,14 +1141,14 @@
               Our Impact in Numbers
             </h2>
           </div>
-          <p class="text-lg w-[646px] text-white mb-12">
+          <p class="text-lg lg:w-[646px] text-white mb-12">
             Driving growth and supporting Qatar’s business community through
             trusted services and active engagement.
           </p>
         </div>
 
         <!-- counts-container -->
-        <div class="flex items-center justify-between px-[68px] slide-left-2">
+        <div class="flex md:flex-row flex-col items-center justify-between px-[68px] slide-left-2">
           <!-- count card -->
           <div class="flex flex-col justify-center items-center gap-2">
             <h2 class="text-[40px] font-bold text-white odometer" id="odometer-members">
@@ -952,7 +1157,7 @@
             <p class="text-lg font-semibold text-white">Member</p>
           </div>
           <!-- divider -->
-          <div class="h-[112px] w-[1px] bg-white"></div>
+          <div class="h-[112px] w-[1px] bg-white md:flex hidden"></div>
           <!-- count card -->
           <div class="flex flex-col justify-center items-center gap-2">
             <h2 class="text-[40px] font-bold text-white odometer" id="odometer-digital1">
@@ -963,7 +1168,7 @@
             </p>
           </div>
           <!-- divider -->
-          <div class="h-[112px] w-[1px] bg-white"></div>
+          <div class="h-[112px] w-[1px] bg-white md:flex hidden"></div>
           <!-- count card -->
           <div class="flex flex-col justify-center items-center gap-2">
             <h2 class="text-[40px] font-bold text-white odometer" id="odometer-digital2">
@@ -974,7 +1179,7 @@
             </p>
           </div>
           <!-- divider -->
-          <div class="h-[112px] w-[1px] bg-white"></div>
+          <div class="h-[112px] w-[1px] bg-white md:flex hidden"></div>
           <!-- count card -->
           <div class="flex flex-col justify-center items-center gap-2">
             <h2 class="text-[40px] font-bold text-white odometer" id="odometer-events">
@@ -1033,16 +1238,16 @@
             <div class="w-[72px] h-[6px] bg-black rounded-[1px]"></div>
             <h2 class="text-black text-[32px] font-bold">Latest news</h2>
           </div>
-          <button class="border text-lg font-semibold border-black rounded-lg text-black px-6 py-4">
+          <button class="border text-lg font-semibold border-black rounded-lg text-black px-6 py-4 hover:bg-[#901630] hover:text-white">
             View all news
           </button>
         </div>
-        <div class="flex gap-[26px] bg-[#901630] text-white rounded-lg mb-[56px]">
+        <div class="flex lg:flex-row flex-col gap-[26px] bg-[#901630] text-white rounded-lg mb-[56px]">
           <!-- image -->
-          <div class="flex-shrink-0">
-            <img src="assets/images/news-main.png" alt="news main" class="w-[619px] h-full rounded-s-lg object-cover" />
+          <div class="flex-shrink-0 mx-auto">
+            <img src="assets/images/news-main.png" alt="news main" class="lg:w-[619px] md:w-[500px] h-full rounded-s-lg object-cover" />
           </div>
-          <div class="py-[83px] pe-[4px] space-y-[19px]">
+          <div class="py-[83px] lg:pe-[4px] px-4 space-y-[19px]">
             <h2 class="text-[28px] font-semibold">
               Qatar Chamber Explores Cooperation with Sudanese Chambers Union
             </h2>
@@ -1059,50 +1264,65 @@
           </div>
         </div>
       </div>
-      <div class="grid grid-cols-3 gap-6 relative">
-        <button class="absolute top-1/2 -end-16 -translate-y-1/2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"
-            class="rotate-180">
-            <path
-              d="M28.937 42.7439C29.5129 43.435 30.5826 43.4087 31.1239 42.6901L32.3221 41.0994C32.7177 40.5744 32.6932 39.8445 32.2633 39.3471L19.7886 24.9121C19.3357 24.388 19.3357 23.6111 19.7886 23.087L32.2633 8.65195C32.6932 8.15459 32.7177 7.42472 32.3221 6.89967L31.1239 5.30898C30.5826 4.59043 29.5129 4.56416 28.937 5.25525L14.0613 23.1061C13.63 23.6237 13.63 24.3755 14.0613 24.893L28.937 42.7439Z"
-              fill="#901630" />
-          </svg>
-        </button>
-        <button class="absolute top-1/2 -start-16 -translate-y-1/2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-            <path
-              d="M28.937 42.7439C29.5129 43.435 30.5826 43.4087 31.1239 42.6901L32.3221 41.0994C32.7177 40.5744 32.6932 39.8445 32.2633 39.3471L19.7886 24.9121C19.3357 24.388 19.3357 23.6111 19.7886 23.087L32.2633 8.65195C32.6932 8.15459 32.7177 7.42472 32.3221 6.89967L31.1239 5.30898C30.5826 4.59043 29.5129 4.56416 28.937 5.25525L14.0613 23.1061C13.63 23.6237 13.63 24.3755 14.0613 24.893L28.937 42.7439Z"
-              fill="#901630" />
-          </svg>
-        </button>
-        <div class="rounded-lg overflow-hidden bg-[#901630]">
+      <div class="relative  z-0">
+      <div class="news-swiper swiper ">
+     
+        <div class="swiper-wrapper relative">
+        <div class="swiper-slide max-w-[395px] rounded-lg overflow-hidden bg-[#901630]">
           <img src="assets/images/news-1.png" alt="" />
           <div class="p-6 flex flex-col gap-[19px]">
             <h3 class="text-[#fff] font-semibold text-lg">26 AUG 2025</h3>
-            <h2 class="text-[24px] text-white font-semibold">
+            <h2 class="text-[24px] text-white font-semibold h-[120px]">
               Qatar Chamber Discusses Technology Cooperation with Uzbekistan
             </h2>
           </div>
         </div>
-        <div class="rounded-lg overflow-hidden bg-[#901630]">
+        <div class="swiper-slide max-w-[395px] rounded-lg overflow-hidden bg-[#901630]">
           <img src="assets/images/news-2.png" alt="" />
           <div class="p-6 flex flex-col gap-[19px]">
             <h3 class="text-[#fff] font-semibold text-lg">26 AUG 2025</h3>
-            <h2 class="text-[24px] text-white font-semibold">
+            <h2 class="text-[24px] text-white font-semibold h-[120px]">
               Qatar Chamber Concludes Training program on ISO26000 CSR
               Management System
             </h2>
           </div>
         </div>
-        <div class="rounded-lg overflow-hidden bg-[#901630]">
+        <div class="swiper-slide max-w-[395px] rounded-lg overflow-hidden bg-[#901630]">
           <img src="assets/images/news-3.png" alt="" />
           <div class="p-6 flex flex-col gap-[19px]">
             <h3 class="text-[#fff] font-semibold text-lg">26 AUG 2025</h3>
-            <h2 class="text-[24px] text-white font-semibold">
+            <h2 class="text-[24px] text-white font-semibold h-[120px]">
               Qatar Chamber Explores Strengthening Ties with Islamabad Chamber
             </h2>
           </div>
         </div>
+        <div class="swiper-slide max-w-[395px] rounded-lg overflow-hidden bg-[#901630]">
+          <img src="assets/images/news-1.png" alt="" class="" />
+          <div class="p-6 flex flex-col gap-[19px]">
+            <h3 class="text-[#fff] font-semibold text-lg">26 AUG 2025</h3>
+            <h2 class="text-[24px] text-white font-semibold h-[120px]">
+              Qatar Chamber Discusses Technology Cooperation with Uzbekistan
+            </h2>
+          </div>
+        </div>
+        </div>
+      </div>
+      <button class="news-swiper-button-next absolute top-1/2 xl:-end-16 end-2 xl:bg-transparent bg-white rounded-full p-2 -translate-y-1/2 z-[9999] xl:w-auto xl:h-auto lg:w-[48px] lg:h-[48px] w-[40px] h-[40px]">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none"
+          class="rotate-180 xl:w-auto xl:h-auto lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]">
+          <path
+            d="M28.937 42.7439C29.5129 43.435 30.5826 43.4087 31.1239 42.6901L32.3221 41.0994C32.7177 40.5744 32.6932 39.8445 32.2633 39.3471L19.7886 24.9121C19.3357 24.388 19.3357 23.6111 19.7886 23.087L32.2633 8.65195C32.6932 8.15459 32.7177 7.42472 32.3221 6.89967L31.1239 5.30898C30.5826 4.59043 29.5129 4.56416 28.937 5.25525L14.0613 23.1061C13.63 23.6237 13.63 24.3755 14.0613 24.893L28.937 42.7439Z"
+            fill="#901630" />
+        </svg>
+      </button>
+      <button class="news-swiper-button-prev absolute top-1/2 xl:-start-16 start-2 xl:bg-transparent bg-white rounded-full p-2 -translate-y-1/2 z-[9999] xl:w-auto xl:h-auto lg:w-[48px] lg:h-[48px] w-[40px] h-[40px]">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" class="xl:w-auto xl:h-auto lg:w-[32px] lg:h-[32px] w-[24px] h-[24px]">
+         
+          <path
+            d="M28.937 42.7439C29.5129 43.435 30.5826 43.4087 31.1239 42.6901L32.3221 41.0994C32.7177 40.5744 32.6932 39.8445 32.2633 39.3471L19.7886 24.9121C19.3357 24.388 19.3357 23.6111 19.7886 23.087L32.2633 8.65195C32.6932 8.15459 32.7177 7.42472 32.3221 6.89967L31.1239 5.30898C30.5826 4.59043 29.5129 4.56416 28.937 5.25525L14.0613 23.1061C13.63 23.6237 13.63 24.3755 14.0613 24.893L28.937 42.7439Z"
+            fill="#901630" />
+        </svg>
+      </button>
       </div>
     </div>
   </section>
@@ -1126,7 +1346,7 @@
       <div class="border-y border-[#D9D9D9]">
         <div
           class="py-8 xl:px-[100px] lg:px-20 md:px-12 px-6 flex flex-col md:flex-row md:justify-between md:items-center gap-6 max-w-[1536px] mx-auto">
-          <img src="assets/images/logo.png" alt="logo" class="h-10 slide-right-1" />
+          <img src="assets/images/logo.png" alt="logo" class="md:mx-0 mx-auto h-10 slide-right-1" />
 
           <div class="flex flex-col md:flex-row justify-between items-center gap-6 slide-left-1">
             <p class="text-[#4A4A4A] text-base font-semibold">
@@ -1531,8 +1751,53 @@
         },
       },
     });
-
-    // Function to update pagination bullet styles
+    // Initialize Services Swiper
+    const servicesSwiper = new Swiper(".services-swiper", {
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 24,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".services-swiper-button-next",
+      prevEl: ".services-swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+   // Initialize news Swiper
+   const newsSwiper = new Swiper(".news-swiper", {
+    slidesPerView: 1.5,
+    loop: true,
+    spaceBetween: 24,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".news-swiper-button-next",
+      prevEl: ".news-swiper-button-prev",
+    },
+    autoHeight: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 2.5,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+     
+  // Function to update pagination bullet styles
     function updatePaginationBullets() {
       const bullets = document.querySelectorAll(
         ".hero-swiper-pagination .swiper-pagination-bullet"
@@ -1549,6 +1814,42 @@
     }
 
     let activeTab = null; // No default active tab
+   
+function toggleMobileMenu() {
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+}
+
+function toggleSubmenu(id) {
+
+  // Close all open submenus first
+  document.querySelectorAll("[id$='Mobile']").forEach(submenu => {
+    if (submenu.id !== id) {
+      submenu.classList.add("hidden");
+      const arrow = document.getElementById(submenu.id + "Arrow");
+      if (arrow) arrow.textContent = "+";
+    
+    }
+  });
+
+  // Toggle the clicked submenu
+  const submenu = document.getElementById(id);
+  const arrow = document.getElementById(id + "Arrow");
+  const isHidden = submenu.classList.contains("hidden");
+  // const button = document.querySelector(`button[onclick="toggleSubmenu('${id}')"]`);
+  if (isHidden) {
+    submenu.classList.remove("hidden");
+    arrow.textContent = "−";
+ 
+  
+  } else {
+    submenu.classList.add("hidden");
+    arrow.textContent = "+";
+
+    
+  }
+}
+
+
 
     function toggleDropdown(tabId) {
       // Hide all dropdowns

@@ -1021,9 +1021,16 @@ html body {
   overflow-x: hidden;
 }
 .section-container {
-  max-width: 1245px;
+padding-inline-start: 24px;
   margin: 0 auto;
 }
+@media (min-width: 1280px) {
+  .section-container {
+    max-width: 1245px;
+    margin: 0 auto;
+  }
+}
+
 .services-background {
   background-image: url("../assets/images/pattren-services.png");
   background-repeat: no-repeat;
