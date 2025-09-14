@@ -1089,6 +1089,21 @@ html body {
   background: white !important;
   transform: scale(1.1);
 }
+@media (max-width: 1280px) {
+  .grid-4-cols-fix> :nth-child(4n) {
+    border-right: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .grid-3-cols-fix> :nth-child(3n) {
+    border-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .grid-2-cols-fix> :nth-child(2n) {
+    border-right: 0;
+  }
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
