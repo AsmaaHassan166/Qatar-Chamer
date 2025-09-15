@@ -753,7 +753,7 @@
               <div class="flex flex-col gap-2">
                 <div class="w-[72px] h-[6px] bg-white rounded-[1px]"></div>
                 <h2 class="text-white md:text-[48px] text-[32px] font-bold max-w-[1101px]">
-                  Simplify your business setup in Doha with expert support and strong connections.
+                  Gateway to trade, investment, and global business opportunities from Qatar
                 </h2>
               </div>
               <button
@@ -787,8 +787,7 @@
               <div class="flex flex-col gap-2">
                 <div class="w-[72px] h-[6px] bg-white rounded-[1px]"></div>
                 <h2 class="text-white md:text-[48px] text-[32px] font-bold max-w-[1101px]">
-                  Simplify your business setup in Doha with expert support and strong connections.
-                </h2>
+                  Building Qatar’s economic future through united entrepreneurs, companies, and industries. </h2>
               </div>
               <button
                 class="border text-lg font-semibold border-white rounded-lg w-fit text-white px-6 py-4 hover:bg-[#901630] hover:border-[#901630] transition-colors duration-300">
@@ -821,8 +820,7 @@
               <div class="flex flex-col gap-2">
                 <div class="w-[72px] h-[6px] bg-white rounded-[1px]"></div>
                 <h2 class="text-white md:text-[48px] text-[32px] font-bold max-w-[1101px]">
-                  Simplify your business setup in Doha with expert support and strong connections.
-                </h2>
+                  Empowering Qatar’s businesses and investors with resources, advocacy, and global connections. </h2>
               </div>
               <button
                 class="border text-lg font-semibold border-white rounded-lg w-fit text-white px-6 py-4 hover:bg-[#901630] hover:border-[#901630] transition-colors duration-300">
@@ -1157,7 +1155,7 @@
         <div class="flex md:flex-row flex-col items-center justify-between px-[68px] slide-left-2">
           <!-- count card -->
           <div class="flex flex-col justify-center items-center gap-2">
-            <h2 class="text-[40px] font-bold text-white odometer" id="odometer-members">
+            <h2 class="text-[40px] font-bold text-white odometer" id="odometer-members" data-duration="8000">
               0
             </h2>
             <p class="text-lg font-semibold text-white">Member</p>
@@ -1166,7 +1164,7 @@
           <div class="h-[112px] w-[1px] bg-white md:flex hidden"></div>
           <!-- count card -->
           <div class="flex flex-col justify-center items-center gap-2">
-            <h2 class="text-[40px] font-bold text-white odometer" id="odometer-digital1">
+            <h2 class="text-[40px] font-bold text-white odometer" id="odometer-digital1" data-duration="8000">
               0
             </h2>
             <p class="text-lg font-semibold text-white">
@@ -1177,7 +1175,7 @@
           <div class="h-[112px] w-[1px] bg-white md:flex hidden"></div>
           <!-- count card -->
           <div class="flex flex-col justify-center items-center gap-2">
-            <h2 class="text-[40px] font-bold text-white odometer" id="odometer-digital2">
+            <h2 class="text-[40px] font-bold text-white odometer" id="odometer-digital2" data-duration="8000">
               0
             </h2>
             <p class="text-lg font-semibold text-white">
@@ -1188,48 +1186,13 @@
           <div class="h-[112px] w-[1px] bg-white md:flex hidden"></div>
           <!-- count card -->
           <div class="flex flex-col justify-center items-center gap-2">
-            <h2 class="text-[40px] font-bold text-white odometer" id="odometer-events">
+            <h2 class="text-[40px] font-bold text-white odometer" id="odometer-events" data-duration="8000">
               0
             </h2>
             <p class="text-lg font-semibold text-white">Events Organized</p>
           </div>
         </div>
-        <!-- Odometer.js CSS -->
-        <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css" />
-        <!-- Odometer.js Script -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
-        <script>
-          // Slow odometer animation
-          window.odometerOptions = { duration: 3000 };
 
-          let odometerAnimated = false;
-          function animateOdometers() {
-            if (odometerAnimated) return;
-            odometerAnimated = true;
-            setTimeout(function () {
-              document.getElementById("odometer-members").innerHTML = 72000;
-              document.getElementById("odometer-digital1").innerHTML = 61000;
-              document.getElementById("odometer-digital2").innerHTML = 44000;
-              document.getElementById("odometer-events").innerHTML = 200;
-            }, 500);
-          }
-
-          document.addEventListener("DOMContentLoaded", function () {
-            var section = document.querySelector(".slide-left-2");
-            if (!section) return;
-            var observer = new window.IntersectionObserver(
-              function (entries) {
-                if (entries[0].isIntersecting && !odometerAnimated) {
-                  animateOdometers();
-                  observer.disconnect();
-                }
-              },
-              { threshold: 0.5 }
-            );
-            observer.observe(section);
-          });
-        </script>
       </div>
     </div>
   </section>
@@ -1990,7 +1953,7 @@
     // Toggle Video Playback
     function toggleVideoPlayback() {
       const video = document.getElementById("heroVideo");
-
+      video.playbackRate = 0.5;
       // Get all pause and play icons by their specific IDs
       const allPauseIcons = [
         document.getElementById("pauseIcon"),
@@ -2092,6 +2055,43 @@
         { transform: ["translateX(-200%)", "translateX(0)"] },
         { duration: 1.5, type: "spring", stiffness: 50, delay: 0.2 }
       );
+    });
+  </script>
+
+  <!-- Odometer.js CSS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css" />
+  <!-- Odometer.js Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
+  <script>
+    // Slow odometer animation
+    // window.odometerOptions = { duration: 12000, animation: 'slide' };
+
+    let odometerAnimated = false;
+    function animateOdometers() {
+      if (odometerAnimated) return;
+      odometerAnimated = true;
+      setTimeout(function () {
+        document.getElementById("odometer-members").innerHTML = 72000;
+        document.getElementById("odometer-digital1").innerHTML = 61000;
+        document.getElementById("odometer-digital2").innerHTML = 44000;
+        document.getElementById("odometer-events").innerHTML = 200;
+      }, 500);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var section = document.querySelector(".slide-left-2");
+      if (!section) return;
+      var observer = new window.IntersectionObserver(
+        function (entries) {
+          if (entries[0].isIntersecting && !odometerAnimated) {
+            animateOdometers();
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.5 }
+      );
+      observer.observe(section);
     });
   </script>
 </body>

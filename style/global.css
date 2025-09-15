@@ -143,3 +143,7 @@ html body {
     border-right: 0;
   }
 }
+
+.odometer.odometer-animating .odometer-ribbon-inner {
+  transition-duration: 6s !important;
+}
